@@ -231,7 +231,7 @@ export default function CollectionPage() {
                         }}
                         className={`relative w-14 h-18 sm:w-16 sm:h-20 flex-shrink-0 rounded overflow-hidden transition-all duration-200 ${
                           selectedImageIndex === imgIndex 
-                            ? 'ring-2 ring-white/70' 
+                            ? 'ring-2 ring-blue-400' 
                             : 'opacity-40 hover:opacity-70'
                         }`}
                       >

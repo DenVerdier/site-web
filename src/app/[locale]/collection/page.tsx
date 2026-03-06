@@ -122,24 +122,24 @@ export default function CollectionPage() {
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
-                    
-                    {/* Hover Overlay with Name - Date - Size */}
+
+                    {/* Hover Overlay - Technique & Collection */}
                     <div className="absolute inset-0 bg-black/50 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-400">
                       <div className="p-5 w-full">
-                        <p className="text-white font-serif text-lg mb-1">
-                          {t(`paintings.${painting.id}.title`)}
-                        </p>
-                        <p className="text-white/70 text-sm">
-                          {t('painting.year')} · {painting.dimensions}
+                        <p className="text-white/80 text-sm">
+                          {t('painting.medium')} — {t('title')}
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Info below image - Technique & Collection */}
+                  {/* Info below image - Name, Year & Dimensions */}
                   <div className="px-4 py-3">
+                    <p className="font-serif text-base text-text-primary mb-0.5">
+                      {t(`paintings.${painting.id}.title`)}
+                    </p>
                     <p className="text-sm text-text-secondary">
-                      {t('painting.medium')} — {t('title')}
+                      {t('painting.year')} · {painting.dimensions}
                     </p>
                   </div>
                 </div>

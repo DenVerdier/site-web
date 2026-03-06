@@ -56,12 +56,78 @@ const paintings = [
     available: true,
     price: '1 270 €'
   },
-  { id: '05', images: ['/images/collection/05-lage-de-lordinateur-portable.jpg'], dimensions: '92 × 65 cm', available: false, price: '' },
-  { id: '06', images: ['/images/collection/06-lage-du-social.jpg'], dimensions: '100 × 65 cm', available: false, price: '' },
-  { id: '07', images: ['/images/collection/07-lage-de-luniformisation.jpg'], dimensions: '100 × 65 cm', available: false, price: '' },
-  { id: '08', images: ['/images/collection/08-loverdose.jpg'], dimensions: '60 × 80 cm', available: false, price: '' },
-  { id: '09', images: ['/images/collection/09-un-equilibre-a-trouver.jpg'], dimensions: '45 × 60 cm', available: false, price: '' },
-  { id: '10', images: ['/images/collection/10-retrouver-la-nature.jpg'], dimensions: '140 × 210 cm', available: false, price: '' },
+  { 
+    id: '05', 
+    images: [
+      '/images/collection/05-lage-de-lordinateur-portable.jpg',
+      '/images/collection/05-lage-de-lordinateur-portable-1.jpg',
+      '/images/collection/05-lage-de-lordinateur-portable-2.jpg',
+      '/images/collection/05-lage-de-lordinateur-portable-3.jpg',
+    ], 
+    dimensions: '92 × 65 cm',
+    available: true,
+    price: '1 570 €'
+  },
+  { 
+    id: '06', 
+    images: [
+      '/images/collection/06-lage-du-social.jpg',
+      '/images/collection/06-lage-du-social-1.jpg',
+      '/images/collection/06-lage-du-social-2.jpg',
+      '/images/collection/06-lage-du-social-3.jpg',
+    ], 
+    dimensions: '100 × 65 cm',
+    available: true,
+    price: '1 650 €'
+  },
+  { 
+    id: '07', 
+    images: [
+      '/images/collection/07-lage-de-luniformisation.jpg',
+      '/images/collection/07-lage-de-luniformisation-1.jpg',
+      '/images/collection/07-lage-de-luniformisation-2.jpg',
+      '/images/collection/07-lage-de-luniformisation-3.jpg',
+    ], 
+    dimensions: '100 × 65 cm',
+    available: true,
+    price: '1 650 €'
+  },
+  { 
+    id: '08', 
+    images: [
+      '/images/collection/08-loverdose.jpg',
+      '/images/collection/08-loverdose-1.jpg',
+      '/images/collection/08-loverdose-2.jpg',
+      '/images/collection/08-loverdose-3.jpg',
+    ], 
+    dimensions: '60 × 80 cm',
+    available: true,
+    price: '1 400 €'
+  },
+  { 
+    id: '09', 
+    images: [
+      '/images/collection/09-un-equilibre-a-trouver.jpg',
+      '/images/collection/09-un-equilibre-a-trouver-1.jpg',
+      '/images/collection/09-un-equilibre-a-trouver-2.jpg',
+      '/images/collection/09-un-equilibre-a-trouver-3.jpg',
+    ], 
+    dimensions: '45 × 60 cm',
+    available: true,
+    price: '1 050 €'
+  },
+  { 
+    id: '10', 
+    images: [
+      '/images/collection/10-retrouver-la-nature.jpg',
+      '/images/collection/10-retrouver-la-nature-1.jpg',
+      '/images/collection/10-retrouver-la-nature-2.jpg',
+      '/images/collection/10-retrouver-la-nature-3.jpg',
+    ], 
+    dimensions: '140 × 210 cm',
+    available: true,
+    price: '3 500 €'
+  },
 ];
 
 export default function CollectionPage() {

@@ -136,10 +136,10 @@ export default function CollectionPage() {
                   {/* Info below image - Name, Year & Dimensions */}
                   <div className="px-4 py-3">
                     <p className="font-serif text-base text-text-primary mb-0.5">
-                      {t(`paintings.${painting.id}.title`)}
+                      {painting.id} · {t(`paintings.${painting.id}.title`)}
                     </p>
                     <p className="text-sm text-text-secondary">
-                      {t('painting.year')} · {painting.dimensions}
+                      {painting.dimensions} — {t('painting.year')}
                     </p>
                   </div>
                 </div>

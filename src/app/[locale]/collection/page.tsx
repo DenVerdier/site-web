@@ -285,8 +285,8 @@ export default function CollectionPage() {
                     {t('painting.medium')} · {t('painting.year')} · {currentPainting.dimensions}
                   </p>
                   {currentPainting.available && (
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded border border-green-400/60 mb-5">
-                      <span className="text-green-400 text-xs">●</span>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-green-400/60 mb-5">
+                      <span className="text-green-400 text-xs animate-pulse">●</span>
                       <p className="text-xs text-white/70">
                         Toile disponible à l'achat — Prix : {currentPainting.price}
                       </p>

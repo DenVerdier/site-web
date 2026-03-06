@@ -265,6 +265,16 @@
   animation: subtle-drift 25s ease-in-out infinite;
 }
 
+/* Gentle pulse for availability indicator */
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: gentle-pulse 2s ease-in-out infinite;
+}
+
 /* Staggered delays */
 .stagger-1 { animation-delay: 0.08s; }
 .stagger-2 { animation-delay: 0.16s; }

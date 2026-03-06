@@ -8,16 +8,16 @@ import Image from 'next/image';
 
 // Painting data with dimensions
 const paintings = [
-  { id: '01', image: '/images/overdose/painting-01.jpg', dimensions: '80 × 100 cm' },
-  { id: '02', image: '/images/overdose/painting-02.jpg', dimensions: '80 × 100 cm' },
-  { id: '03', image: '/images/overdose/painting-03.jpg', dimensions: '80 × 100 cm' },
-  { id: '04', image: '/images/overdose/painting-04.jpg', dimensions: '80 × 100 cm' },
-  { id: '05', image: '/images/overdose/painting-05.jpg', dimensions: '80 × 100 cm' },
-  { id: '06', image: '/images/overdose/painting-06.jpg', dimensions: '80 × 100 cm' },
-  { id: '07', image: '/images/overdose/painting-07.jpg', dimensions: '80 × 100 cm' },
-  { id: '08', image: '/images/overdose/painting-08.jpg', dimensions: '80 × 100 cm' },
-  { id: '09', image: '/images/overdose/painting-09.jpg', dimensions: '80 × 100 cm' },
-  { id: '10', image: '/images/overdose/painting-10.jpg', dimensions: '80 × 100 cm' },
+  { id: '01', image: '/images/collection/01-lage-du-mp3.jpg', dimensions: '73 × 54 cm' },
+  { id: '02', image: '/images/collection/02-lage-du-smartphone.jpg', dimensions: '46 × 55 cm' },
+  { id: '03', image: '/images/collection/03-lage-du-jeu-video.jpg', dimensions: '73 × 54 cm' },
+  { id: '04', image: '/images/collection/04-lage-de-lordinateur.jpg', dimensions: '73 × 54 cm' },
+  { id: '05', image: '/images/collection/05-lage-de-lordinateur-portable.jpg', dimensions: '92 × 65 cm' },
+  { id: '06', image: '/images/collection/06-lage-du-social.jpg', dimensions: '100 × 65 cm' },
+  { id: '07', image: '/images/collection/07-lage-de-luniformisation.jpg', dimensions: '100 × 65 cm' },
+  { id: '08', image: '/images/collection/08-loverdose.jpg', dimensions: '60 × 80 cm' },
+  { id: '09', image: '/images/collection/09-un-equilibre-a-trouver.jpg', dimensions: '45 × 60 cm' },
+  { id: '10', image: '/images/collection/10-retrouver-la-nature.jpg', dimensions: '140 × 210 cm' },
 ];
 
 export default function CollectionPage() {

@@ -65,44 +65,44 @@
     },
     "paintings": {
       "01": {
-        "title": "The MP3 Player",
-        "caption": "An abandoned MP3 player, overrun by succulents — silent witness of a forgotten musical revolution."
+        "title": "The age of mp3",
+        "caption": ""
       },
       "02": {
-        "title": "The Flip Phone",
-        "caption": "A flip phone half-covered in moss, a memory of an era when we could still hang up."
+        "title": "The age of smartphone",
+        "caption": ""
       },
       "03": {
-        "title": "The Bedroom iMac",
-        "caption": "An iMac G3 with a cactus growing from the disk drive — nostalgic blend of colorful technology and persistent nature."
+        "title": "The age of video games",
+        "caption": ""
       },
       "04": {
-        "title": "The Nokia",
-        "caption": "A Nokia 3310 entwined with desert flowers — tribute to the indestructible companion of a generation."
+        "title": "The age of computer",
+        "caption": ""
       },
       "05": {
-        "title": "MSN & Skyblogs",
-        "caption": "An MSN-era laptop open in a field of wild grasses — digital vestige of a connected adolescence."
+        "title": "The age of laptop",
+        "caption": ""
       },
       "06": {
-        "title": "The iPhone",
-        "caption": "An original iPhone lying in sand with cactus shadow — the beginning of a revolution that changed everything."
+        "title": "The age of social",
+        "caption": ""
       },
       "07": {
-        "title": "Social Networks",
-        "caption": "A Facebook notification badge painted on a Greek vase, cracked kintsugi-style — social networks as ancient relics."
+        "title": "The age of uniformity",
+        "caption": ""
       },
       "08": {
-        "title": "The Tablet",
-        "caption": "A tablet reflected in still water with lily pads — technology floating, detached from the earth."
+        "title": "Overdose",
+        "caption": ""
       },
       "09": {
-        "title": "The Smartphone",
-        "caption": "A smartphone face-down in rich soil, with a seedling emerging — nature reclaiming its rights over the black screen."
+        "title": "A balance to find",
+        "caption": ""
       },
       "10": {
-        "title": "AI",
-        "caption": "An abstract AI interface slowly consumed by climbing vines — the future swallowed by the eternal present."
+        "title": "Finding nature again",
+        "caption": ""
       }
     },
     "lightbox": {

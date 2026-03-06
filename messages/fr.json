@@ -65,44 +65,44 @@
     },
     "paintings": {
       "01": {
-        "title": "Le Lecteur MP3",
-        "caption": "Un lecteur MP3 abandonné, envahi par des succulentes — témoin silencieux d'une révolution musicale oubliée."
+        "title": "L'âge du mp3",
+        "caption": ""
       },
       "02": {
-        "title": "Le Téléphone à Clapet",
-        "caption": "Un téléphone à clapet à moitié recouvert de mousse, souvenir d'une ère où l'on pouvait encore décrocher."
+        "title": "L'âge du smartphone",
+        "caption": ""
       },
       "03": {
-        "title": "L'iMac de Chambre",
-        "caption": "Un iMac G3 avec un cactus poussant dans le lecteur de disques — mélange nostalgique de technologie colorée et de nature persistante."
+        "title": "L'âge du jeu vidéo",
+        "caption": ""
       },
       "04": {
-        "title": "Le Nokia",
-        "caption": "Un Nokia 3310 entrelacé de fleurs du désert — hommage à l'indestructible compagnon d'une génération."
+        "title": "L'âge de l'ordinateur",
+        "caption": ""
       },
       "05": {
-        "title": "MSN & Skyblogs",
-        "caption": "Un ordinateur portable de l'ère MSN ouvert dans un champ d'herbes sauvages — vestige numérique d'une adolescence connectée."
+        "title": "L'âge de l'ordinateur portable",
+        "caption": ""
       },
       "06": {
-        "title": "L'iPhone",
-        "caption": "Un iPhone original couché dans le sable avec l'ombre d'un cactus — le début d'une révolution qui a tout changé."
+        "title": "L'âge du social",
+        "caption": ""
       },
       "07": {
-        "title": "Les Réseaux",
-        "caption": "Un badge de notification Facebook peint sur un vase grec, fissuré selon la méthode kintsugi — les réseaux sociaux comme reliques antiques."
+        "title": "L'âge de l'uniformisation",
+        "caption": ""
       },
       "08": {
-        "title": "La Tablette",
-        "caption": "Une tablette reflétée dans une eau calme avec des nénuphars — la technologie qui flotte, détachée de la terre."
+        "title": "L'overdose",
+        "caption": ""
       },
       "09": {
-        "title": "Le Smartphone",
-        "caption": "Un smartphone face contre terre dans un sol riche, avec une pousse qui émerge — la nature reprend ses droits sur l'écran noir."
+        "title": "Un équilibre à trouver",
+        "caption": ""
       },
       "10": {
-        "title": "L'IA",
-        "caption": "Une interface d'IA abstraite lentement envahie par des vignes grimpantes — le futur englouti par le présent éternel."
+        "title": "Retrouver la nature",
+        "caption": ""
       }
     },
     "lightbox": {

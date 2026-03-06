@@ -168,7 +168,7 @@ export default function CollectionPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 bg-black flex flex-col"
+            className="fixed inset-0 z-50 bg-black/90 flex flex-col"
             onClick={() => setLightboxOpen(false)}
           >
             {/* Header */}
@@ -196,6 +196,7 @@ export default function CollectionPage() {
                 <div className="flex-1 relative flex items-center justify-center p-4 lg:p-8 min-h-0">
                   <div className="relative w-full h-full max-w-2xl mx-auto">
                     <Image
+                      key={selectedImageIndex}
                       src={currentPainting.images[selectedImageIndex]}
                       alt={t(`paintings.${currentPainting.id}.title`)}
                       fill

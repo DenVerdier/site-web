@@ -281,13 +281,16 @@ export default function CollectionPage() {
                   <h3 className="font-serif text-lg sm:text-xl text-white mb-2">
                     {currentPainting.id} — {t(`paintings.${currentPainting.id}.title`)}
                   </h3>
-                  <p className="text-xs text-white/50 mb-1">
+                  <p className="text-xs text-white/50 mb-3">
                     {t('painting.medium')} · {t('painting.year')} · {currentPainting.dimensions}
                   </p>
                   {currentPainting.available && (
-                    <p className="text-xs text-white/50 mb-5">
-                      <span className="text-green-400">●</span> Toile disponible à l'achat — Prix : {currentPainting.price}
-                    </p>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded border border-green-400/60 mb-5">
+                      <span className="text-green-400 text-xs">●</span>
+                      <p className="text-xs text-white/70">
+                        Toile disponible à l'achat — Prix : {currentPainting.price}
+                      </p>
+                    </div>
                   )}
                   <div className="text-sm text-white/60 leading-relaxed whitespace-pre-line pr-4">
                     {t(`paintings.${currentPainting.id}.caption`)}

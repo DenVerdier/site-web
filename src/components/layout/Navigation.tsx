@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ExternalLink } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
@@ -19,6 +19,7 @@ export default function Navigation() {
     { href: '/now', label: t('now') },
     { href: '/collection', label: t('collection') },
     { href: '/license-art', label: t('licenseArt') },
+    { href: 'https://denisverdier.substack.com/', label: t('newsletter'), external: true },
     { href: '/contact', label: t('contact') },
   ];
 
@@ -61,18 +62,31 @@ export default function Navigation() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8 ml-8">
               {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "nav-tab text-sm font-medium transition-colors duration-300",
-                    isActive(item.href) 
-                      ? "text-accent" 
-                      : "text-text-secondary hover:text-text-primary"
-                  )}
-                >
-                  {item.label}
-                </Link>
+                item.external ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="nav-tab text-sm font-medium text-text-secondary hover:text-text-primary transition-colors duration-300 flex items-center gap-1"
+                  >
+                    {item.label}
+                    <ExternalLink size={12} className="inline-block" />
+                  </a>
+                ) : (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={cn(
+                      "nav-tab text-sm font-medium transition-colors duration-300",
+                      isActive(item.href) 
+                        ? "text-accent" 
+                        : "text-text-secondary hover:text-text-primary"
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                )
               ))}
             </div>
 
@@ -109,18 +123,31 @@ export default function Navigation() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.04, duration: 0.25 }}
                     >
-                      <Link
-                        href={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className={cn(
-                          "block py-2.5 px-3 text-base font-medium rounded-sm transition-all duration-300",
-                          isActive(item.href)
-                            ? "text-accent"
-                            : "text-text-secondary hover:bg-accent hover:text-white"
-                        )}
-                      >
-                        {item.label}
-                      </Link>
+                      {item.external ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center gap-1 py-2.5 px-3 text-base font-medium rounded-sm text-text-secondary hover:bg-accent hover:text-white transition-all duration-300"
+                        >
+                          {item.label}
+                          <ExternalLink size={12} />
+                        </a>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className={cn(
+                            "block py-2.5 px-3 text-base font-medium rounded-sm transition-all duration-300",
+                            isActive(item.href)
+                              ? "text-accent"
+                              : "text-text-secondary hover:bg-accent hover:text-white"
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
                     </motion.div>
                   ))}
                 </div>

@@ -44,7 +44,18 @@ const paintings = [
     available: true,
     price: '1 270 €'
   },
-  { id: '04', images: ['/images/collection/04-lage-de-lordinateur.jpg'], dimensions: '73 × 54 cm', available: false, price: '' },
+  { 
+    id: '04', 
+    images: [
+      '/images/collection/04-lage-de-lordinateur.jpg',
+      '/images/collection/04-lage-de-lordinateur-1.jpg',
+      '/images/collection/04-lage-de-lordinateur-2.jpg',
+      '/images/collection/04-lage-de-lordinateur-3.jpg',
+    ], 
+    dimensions: '73 × 54 cm',
+    available: true,
+    price: '1 270 €'
+  },
   { id: '05', images: ['/images/collection/05-lage-de-lordinateur-portable.jpg'], dimensions: '92 × 65 cm', available: false, price: '' },
   { id: '06', images: ['/images/collection/06-lage-du-social.jpg'], dimensions: '100 × 65 cm', available: false, price: '' },
   { id: '07', images: ['/images/collection/07-lage-de-luniformisation.jpg'], dimensions: '100 × 65 cm', available: false, price: '' },

@@ -191,16 +191,16 @@ export default function CollectionPage() {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Left - Image Section */}
-              <div className="flex-1 lg:flex-[1.2] flex flex-col min-h-0">
+              <div className="flex-1 lg:w-1/2 flex flex-col min-h-0">
                 {/* Main Image */}
-                <div className="flex-1 relative flex items-center justify-center p-4 lg:p-6 min-h-0">
-                  <div className="relative w-full h-full max-w-xl mx-auto">
+                <div className="flex-1 relative flex items-center justify-center p-4 lg:p-8 min-h-0">
+                  <div className="relative w-full h-full max-w-2xl mx-auto">
                     <Image
                       src={currentPainting.images[selectedImageIndex]}
                       alt={t(`paintings.${currentPainting.id}.title`)}
                       fill
                       className="object-contain"
-                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       priority
                     />
                   </div>
@@ -236,9 +236,9 @@ export default function CollectionPage() {
               </div>
 
               {/* Right - Text Section */}
-              <div className="lg:w-[380px] xl:w-[420px] flex-shrink-0 flex flex-col border-t lg:border-t-0 lg:border-l border-white/10">
+              <div className="lg:w-1/2 flex-shrink-0 flex flex-col border-t lg:border-t-0 lg:border-l border-white/10">
                 {/* Navigation on desktop */}
-                <div className="hidden lg:flex items-center justify-between px-6 py-4 border-b border-white/10">
+                <div className="hidden lg:flex items-center justify-between px-8 py-4 border-b border-white/10">
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
@@ -264,14 +264,14 @@ export default function CollectionPage() {
                 </div>
 
                 {/* Scrollable Text Content */}
-                <div className="flex-1 overflow-y-auto px-6 py-5 lg:py-6">
+                <div className="flex-1 overflow-y-auto px-8 py-6 lg:py-8 scrollbar-thin scrollbar-white/20 hover:scrollbar-white/40">
                   <h3 className="font-serif text-lg sm:text-xl text-white mb-2">
                     {currentPainting.id} — {t(`paintings.${currentPainting.id}.title`)}
                   </h3>
                   <p className="text-xs text-white/50 mb-5">
                     {t('painting.medium')} · {t('painting.year')} · {currentPainting.dimensions}
                   </p>
-                  <div className="text-sm text-white/60 leading-relaxed whitespace-pre-line">
+                  <div className="text-sm text-white/60 leading-relaxed whitespace-pre-line pr-4">
                     {t(`paintings.${currentPainting.id}.caption`)}
                   </div>
                 </div>

@@ -392,6 +392,37 @@
   background: rgba(145, 135, 125, 0.35);
 }
 
+/* Minimalist scrollbar for lightbox */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+.scrollbar-thin:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.scrollbar-white\/20 {
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.scrollbar-white\/40 {
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
 /* ========================================
    HERO SECTION
    ======================================== */

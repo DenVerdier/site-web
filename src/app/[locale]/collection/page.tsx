@@ -36,6 +36,8 @@ export default function CollectionPage() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const scrollYRef = useRef(0);
 
+  const currentPainting = paintings[currentIndex];
+
   // Lock scroll when lightbox is open
   useEffect(() => {
     if (lightboxOpen) {
@@ -47,6 +49,16 @@ export default function CollectionPage() {
       document.body.style.overflow = '';
     };
   }, [lightboxOpen]);
+
+  // Preload all images of current painting when lightbox opens
+  useEffect(() => {
+    if (lightboxOpen && currentPainting.images.length > 1) {
+      currentPainting.images.forEach((src) => {
+        const img = new window.Image();
+        img.src = src;
+      });
+    }
+  }, [lightboxOpen, currentPainting.images]);
 
   // Keyboard navigation
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
@@ -67,8 +79,6 @@ export default function CollectionPage() {
     setSelectedImageIndex(0);
     setLightboxOpen(true);
   };
-
-  const currentPainting = paintings[currentIndex];
 
   return (
     <div className="min-h-screen pt-16 sm:pt-[4.5rem]">

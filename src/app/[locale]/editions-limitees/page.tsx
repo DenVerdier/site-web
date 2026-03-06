@@ -7,8 +7,11 @@ import { X, ChevronLeft, ChevronRight, Check, Loader2 } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
-// Available prints (2 paintings from the collection)
-const availablePrints = ['01', '04'];
+// Available prints with their images and names
+const availablePrints = [
+  { id: 'cueillette-jour', image: '/images/editions/cueillette-jour.jpg' },
+  { id: 'cueillette-nuit', image: '/images/editions/cueillette-nuit.jpg' },
+];
 
 // Mockup images for gallery in modal
 const mockupImages = [
@@ -20,9 +23,14 @@ const mockupImages = [
 // Fixed format: 30x40cm for 50€
 const FIXED_FORMAT = { size: '30x40cm', price: 50 };
 
+// Print names
+const printNames: Record<string, { title: string }> = {
+  'cueillette-jour': { title: 'Cueillette jour' },
+  'cueillette-nuit': { title: 'Cueillette nuit' },
+};
+
 export default function LicensePage() {
   const t = useTranslations('license');
-  const tCollection = useTranslations('collection');
   
   const [selectedPrint, setSelectedPrint] = useState<string | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
@@ -32,11 +40,16 @@ export default function LicensePage() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  // Get print title
+  const getPrintTitle = (printId: string) => {
+    return printNames[printId]?.title || printId;
+  };
   
   // Images for gallery: painting + mockups
   const galleryImages = selectedPrint 
     ? [
-        `/images/overdose/painting-${selectedPrint}.jpg`,
+        availablePrints.find(p => p.id === selectedPrint)?.image || '',
         ...mockupImages
       ]
     : [];
@@ -69,7 +82,7 @@ export default function LicensePage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           printId: selectedPrint,
-          printName: tCollection(`paintings.${selectedPrint}.title`),
+          printName: getPrintTitle(selectedPrint),
           name: formData.name,
           email: formData.email,
           message: formData.message || null,
@@ -143,23 +156,23 @@ export default function LicensePage() {
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           {/* Prints Grid - 2 columns */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:gap-12">
-            {availablePrints.map((printId, index) => (
+            {availablePrints.map((print, index) => (
               <motion.article
-                key={printId}
+                key={print.id}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className="cursor-pointer"
-                onClick={() => openOrderModal(printId)}
+                onClick={() => openOrderModal(print.id)}
               >
                 {/* Card with image + info attached */}
                 <div className="bg-white rounded-[3px] overflow-hidden shadow-soft">
-                  {/* Print Image - No hover effect */}
+                  {/* Print Image */}
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <Image
-                      src={`/images/overdose/painting-${printId}.jpg`}
-                      alt={tCollection(`paintings.${printId}.title`)}
+                      src={print.image}
+                      alt={getPrintTitle(print.id)}
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 100vw, 50vw"
@@ -169,28 +182,21 @@ export default function LicensePage() {
                   {/* Print Info */}
                   <div className="p-4">
                     <h3 className="font-serif text-title text-text-primary">
-                      {tCollection(`paintings.${printId}.title`)}
+                      {getPrintTitle(print.id)}
                     </h3>
                     <p className="text-sm text-text-muted mb-1">{t('printTitle')}</p>
-                    <p className="text-sm text-text-muted">{t('edition')}</p>
-
-                    {/* Fixed Format Display */}
-                    <div className="mt-4 mb-4">
-                      <span className="inline-block px-3 py-1.5 text-sm font-medium bg-warm-gray-light text-text-secondary rounded-sm">
-                        {FIXED_FORMAT.size}
-                      </span>
-                    </div>
+                    <p className="text-sm text-text-muted">{t('edition')} · {FIXED_FORMAT.size}</p>
 
                     {/* Price & Order */}
-                    <div className="flex items-center justify-between">
-                      <p className="font-serif text-lg text-text-primary">
+                    <div className="flex items-center justify-between mt-4">
+                      <span className="font-serif text-lg bg-accent text-white px-3 py-1 rounded-[3px]">
                         {FIXED_FORMAT.price} €
-                      </p>
+                      </span>
                       
                       <Button
                         onClick={(e) => {
                           e.stopPropagation();
-                          openOrderModal(printId);
+                          openOrderModal(print.id);
                         }}
                         variant="ghost"
                         className="text-sm text-accent hover:text-accent-hover hover:bg-transparent"
@@ -230,7 +236,7 @@ export default function LicensePage() {
                 [&::-webkit-scrollbar-thumb:hover]:bg-warm-gray/60"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Header with Title and Close Button */}
+              {/* Header */}
               <div className="flex items-center justify-between mb-3">
                 <h2 className="font-serif text-3xl text-accent">{t('modal.title')}</h2>
                 <button
@@ -255,7 +261,7 @@ export default function LicensePage() {
                   >
                     <Image
                       src={galleryImages[currentImageIndex]}
-                      alt={`${tCollection(`paintings.${selectedPrint}.title`)} - ${currentImageIndex + 1}`}
+                      alt={`${getPrintTitle(selectedPrint)} - ${currentImageIndex + 1}`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 448px) 100vw, 448px"
@@ -267,19 +273,13 @@ export default function LicensePage() {
                 {galleryImages.length > 1 && (
                   <>
                     <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        prevImage();
-                      }}
+                      onClick={(e) => { e.stopPropagation(); prevImage(); }}
                       className="absolute left-2 top-1/2 -translate-y-1/2 p-1.5 bg-white/80 hover:bg-white rounded-full shadow-sm transition-colors duration-200"
                     >
                       <ChevronLeft size={20} className="text-text-primary" />
                     </button>
                     <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        nextImage();
-                      }}
+                      onClick={(e) => { e.stopPropagation(); nextImage(); }}
                       className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-white/80 hover:bg-white rounded-full shadow-sm transition-colors duration-200"
                     >
                       <ChevronRight size={20} className="text-text-primary" />
@@ -287,35 +287,26 @@ export default function LicensePage() {
                   </>
                 )}
                 
-                {/* Dots Indicator */}
+                {/* Dots */}
                 {galleryImages.length > 1 && (
                   <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
                     {galleryImages.map((_, idx) => (
                       <button
                         key={idx}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setCurrentImageIndex(idx);
-                        }}
-                        className={`w-1.5 h-1.5 rounded-full transition-colors duration-200 ${
-                          idx === currentImageIndex ? 'bg-accent' : 'bg-white/60'
-                        }`}
+                        onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(idx); }}
+                        className={`w-1.5 h-1.5 rounded-full transition-colors duration-200 ${idx === currentImageIndex ? 'bg-accent' : 'bg-white/60'}`}
                       />
                     ))}
                   </div>
                 )}
               </div>
 
-              {/* Selected Print Info with Price */}
+              {/* Selected Print Info */}
               <div className="flex items-center justify-between p-3 bg-warm-gray-light/50 rounded-[3px] mb-4">
                 <div>
                   <p className="text-xs text-text-muted mb-0.5">{t('modal.selectedPrint')}</p>
-                  <h3 className="font-serif text-base text-text-primary">
-                    {tCollection(`paintings.${selectedPrint}.title`)}
-                  </h3>
-                  <p className="text-xs text-text-muted mt-0.5">
-                    {t('edition')} · {FIXED_FORMAT.size}
-                  </p>
+                  <h3 className="font-serif text-base text-text-primary">{getPrintTitle(selectedPrint)}</h3>
+                  <p className="text-xs text-text-muted mt-0.5">{t('edition')} · {FIXED_FORMAT.size}</p>
                 </div>
                 <span className="font-serif text-lg bg-accent text-white px-3 py-1 rounded-[3px]">
                   {FIXED_FORMAT.price} €
@@ -325,9 +316,7 @@ export default function LicensePage() {
               {/* Contact Form */}
               <form className="space-y-3.5" onSubmit={handleSubmit}>
                 <div>
-                  <label className="block text-xs font-medium text-text-secondary mb-1">
-                    {t('modal.name')}
-                  </label>
+                  <label className="block text-xs font-medium text-text-secondary mb-1">{t('modal.name')}</label>
                   <input
                     type="text"
                     placeholder={t('modal.namePlaceholder')}
@@ -340,9 +329,7 @@ export default function LicensePage() {
                 </div>
                 
                 <div>
-                  <label className="block text-xs font-medium text-text-secondary mb-1">
-                    {t('modal.email')}
-                  </label>
+                  <label className="block text-xs font-medium text-text-secondary mb-1">{t('modal.email')}</label>
                   <input
                     type="email"
                     placeholder={t('modal.emailPlaceholder')}
@@ -355,9 +342,7 @@ export default function LicensePage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-text-secondary mb-1">
-                    {t('modal.message')}
-                  </label>
+                  <label className="block text-xs font-medium text-text-secondary mb-1">{t('modal.message')}</label>
                   <textarea
                     placeholder={t('modal.messagePlaceholder')}
                     value={formData.message}
@@ -369,33 +354,15 @@ export default function LicensePage() {
                 </div>
 
                 <div className="flex gap-2.5 pt-2">
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    onClick={() => setModalOpen(false)}
-                    className="flex-1 text-text-secondary"
-                    disabled={isSubmitting}
-                  >
+                  <Button type="button" variant="ghost" onClick={() => setModalOpen(false)} className="flex-1 text-text-secondary" disabled={isSubmitting}>
                     {t('modal.cancel')}
                   </Button>
-                  <Button
-                    type="submit"
-                    className="flex-1 bg-accent hover:bg-accent-hover text-white"
-                    disabled={isSubmitting}
-                  >
+                  <Button type="submit" className="flex-1 bg-accent hover:bg-accent-hover text-white" disabled={isSubmitting}>
                     {isSubmitting ? (
-                      <span className="flex items-center gap-2">
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        {t('modal.submitting') || 'Envoi...'}
-                      </span>
+                      <span className="flex items-center gap-2"><Loader2 className="w-4 h-4 animate-spin" />{t('modal.submitting') || 'Envoi...'}</span>
                     ) : submitSuccess ? (
-                      <span className="flex items-center gap-2">
-                        <Check className="w-4 h-4" />
-                        {t('modal.success') || 'Envoyé !'}
-                      </span>
-                    ) : (
-                      t('modal.submit')
-                    )}
+                      <span className="flex items-center gap-2"><Check className="w-4 h-4" />{t('modal.success') || 'Envoyé !'}</span>
+                    ) : t('modal.submit')}
                   </Button>
                 </div>
               </form>

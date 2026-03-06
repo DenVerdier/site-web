@@ -168,70 +168,47 @@ export default function CollectionPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 sm:p-8"
+            className="fixed inset-0 z-50 bg-black flex flex-col"
             onClick={() => setLightboxOpen(false)}
           >
-            {/* Close Button */}
-            <button
-              onClick={() => setLightboxOpen(false)}
-              className="absolute top-5 right-5 sm:top-8 sm:right-8 p-2 text-white/40 hover:text-white/80 transition-colors duration-300 z-10"
-              aria-label={t('lightbox.close')}
-            >
-              <X size={28} strokeWidth={1.5} />
-            </button>
+            {/* Header */}
+            <div className="flex-shrink-0 flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
+              <p className="font-mono text-xs text-white/40 tracking-wider">
+                {t('painting.number', { number: currentPainting.id })}
+              </p>
+              <button
+                onClick={() => setLightboxOpen(false)}
+                className="p-2 text-white/40 hover:text-white/80 transition-colors duration-300"
+                aria-label={t('lightbox.close')}
+              >
+                <X size={24} strokeWidth={1.5} />
+              </button>
+            </div>
 
-            {/* Navigation Arrows */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setCurrentIndex((prev) => (prev === 0 ? paintings.length - 1 : prev - 1));
-                setSelectedImageIndex(0);
-              }}
-              className="absolute left-4 sm:left-8 p-3 text-white/40 hover:text-white/80 transition-colors duration-300 z-10"
-              aria-label={t('lightbox.previous')}
-            >
-              <ChevronLeft size={36} strokeWidth={1.5} />
-            </button>
-            
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setCurrentIndex((prev) => (prev === paintings.length - 1 ? 0 : prev + 1));
-                setSelectedImageIndex(0);
-              }}
-              className="absolute right-4 sm:right-8 p-3 text-white/40 hover:text-white/80 transition-colors duration-300 z-10"
-              aria-label={t('lightbox.next')}
-            >
-              <ChevronRight size={36} strokeWidth={1.5} />
-            </button>
-
-            {/* Two Column Layout */}
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.96 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-col lg:flex-row gap-6 lg:gap-10 max-w-6xl w-full max-h-[85vh]"
+            {/* Main Content */}
+            <div 
+              className="flex-1 flex flex-col lg:flex-row overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Left Column - Image Gallery */}
-              <div className="flex flex-col gap-4 lg:w-1/2">
+              {/* Left - Image Section */}
+              <div className="flex-1 lg:flex-[1.2] flex flex-col min-h-0">
                 {/* Main Image */}
-                <div className="relative aspect-[4/5] flex-shrink-0 rounded-[3px] overflow-hidden bg-white/5">
-                  <Image
-                    src={currentPainting.images[selectedImageIndex]}
-                    alt={t(`paintings.${currentPainting.id}.title`)}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    priority
-                  />
+                <div className="flex-1 relative flex items-center justify-center p-4 lg:p-6 min-h-0">
+                  <div className="relative w-full h-full max-w-xl mx-auto">
+                    <Image
+                      src={currentPainting.images[selectedImageIndex]}
+                      alt={t(`paintings.${currentPainting.id}.title`)}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      priority
+                    />
+                  </div>
                 </div>
                 
-                {/* Thumbnail Gallery */}
+                {/* Thumbnails */}
                 {currentPainting.images.length > 1 && (
-                  <div className="flex gap-2 overflow-x-auto pb-2">
+                  <div className="flex-shrink-0 flex justify-center gap-2 px-4 pb-4 lg:pb-6">
                     {currentPainting.images.map((img, imgIndex) => (
                       <button
                         key={imgIndex}
@@ -239,10 +216,10 @@ export default function CollectionPage() {
                           e.stopPropagation();
                           setSelectedImageIndex(imgIndex);
                         }}
-                        className={`relative w-20 h-24 flex-shrink-0 rounded-[2px] overflow-hidden transition-all duration-200 ${
+                        className={`relative w-14 h-18 sm:w-16 sm:h-20 flex-shrink-0 rounded overflow-hidden transition-all duration-200 ${
                           selectedImageIndex === imgIndex 
-                            ? 'ring-2 ring-white/60' 
-                            : 'opacity-50 hover:opacity-80'
+                            ? 'ring-2 ring-white/70' 
+                            : 'opacity-40 hover:opacity-70'
                         }`}
                       >
                         <Image
@@ -250,7 +227,7 @@ export default function CollectionPage() {
                           alt=""
                           fill
                           className="object-cover"
-                          sizes="80px"
+                          sizes="64px"
                         />
                       </button>
                     ))}
@@ -258,22 +235,74 @@ export default function CollectionPage() {
                 )}
               </div>
 
-              {/* Right Column - Text */}
-              <div className="lg:w-1/2 flex flex-col justify-center text-white overflow-y-auto">
-                <p className="font-mono text-xs text-white/40 mb-3 tracking-wider">
-                  {t('painting.number', { number: currentPainting.id })}
-                </p>
-                <h3 className="font-serif text-2xl sm:text-3xl text-white mb-3">
-                  {currentPainting.id} — {t(`paintings.${currentPainting.id}.title`)}
-                </h3>
-                <p className="text-sm text-white/50 mb-6">
-                  {t('painting.medium')} · {t('painting.year')} · {currentPainting.dimensions}
-                </p>
-                <p className="text-base text-white/70 leading-relaxed">
-                  {t(`paintings.${currentPainting.id}.caption`)}
-                </p>
+              {/* Right - Text Section */}
+              <div className="lg:w-[380px] xl:w-[420px] flex-shrink-0 flex flex-col border-t lg:border-t-0 lg:border-l border-white/10">
+                {/* Navigation on desktop */}
+                <div className="hidden lg:flex items-center justify-between px-6 py-4 border-b border-white/10">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentIndex((prev) => (prev === 0 ? paintings.length - 1 : prev - 1));
+                      setSelectedImageIndex(0);
+                    }}
+                    className="flex items-center gap-2 text-white/40 hover:text-white/80 transition-colors duration-300"
+                  >
+                    <ChevronLeft size={20} strokeWidth={1.5} />
+                    <span className="text-xs uppercase tracking-wider">{t('lightbox.previous')}</span>
+                  </button>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentIndex((prev) => (prev === paintings.length - 1 ? 0 : prev + 1));
+                      setSelectedImageIndex(0);
+                    }}
+                    className="flex items-center gap-2 text-white/40 hover:text-white/80 transition-colors duration-300"
+                  >
+                    <span className="text-xs uppercase tracking-wider">{t('lightbox.next')}</span>
+                    <ChevronRight size={20} strokeWidth={1.5} />
+                  </button>
+                </div>
+
+                {/* Scrollable Text Content */}
+                <div className="flex-1 overflow-y-auto px-6 py-5 lg:py-6">
+                  <h3 className="font-serif text-lg sm:text-xl text-white mb-2">
+                    {currentPainting.id} — {t(`paintings.${currentPainting.id}.title`)}
+                  </h3>
+                  <p className="text-xs text-white/50 mb-5">
+                    {t('painting.medium')} · {t('painting.year')} · {currentPainting.dimensions}
+                  </p>
+                  <div className="text-sm text-white/60 leading-relaxed whitespace-pre-line">
+                    {t(`paintings.${currentPainting.id}.caption`)}
+                  </div>
+                </div>
               </div>
-            </motion.div>
+            </div>
+
+            {/* Mobile Navigation */}
+            <div className="lg:hidden flex-shrink-0 flex items-center justify-between px-6 py-4 border-t border-white/10">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setCurrentIndex((prev) => (prev === 0 ? paintings.length - 1 : prev - 1));
+                  setSelectedImageIndex(0);
+                }}
+                className="flex items-center gap-2 text-white/40 hover:text-white/80 transition-colors duration-300"
+              >
+                <ChevronLeft size={20} strokeWidth={1.5} />
+                <span className="text-xs uppercase tracking-wider">{t('lightbox.previous')}</span>
+              </button>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setCurrentIndex((prev) => (prev === paintings.length - 1 ? 0 : prev + 1));
+                  setSelectedImageIndex(0);
+                }}
+                className="flex items-center gap-2 text-white/40 hover:text-white/80 transition-colors duration-300"
+              >
+                <span className="text-xs uppercase tracking-wider">{t('lightbox.next')}</span>
+                <ChevronRight size={20} strokeWidth={1.5} />
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

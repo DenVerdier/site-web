@@ -376,7 +376,7 @@ export default function CollectionPage() {
                 </div>
 
                 {/* Scrollable Text Content */}
-                <div className="flex-1 overflow-y-auto px-8 py-6 lg:py-8 scrollbar-thin scrollbar-white/20 hover:scrollbar-white/40">
+                <div className="flex-1 overflow-y-auto px-8 py-6 lg:py-8 xl:pr-[40%] scrollbar-thin scrollbar-white/20 hover:scrollbar-white/40">
                   <h3 className="font-serif text-lg sm:text-xl text-white mb-2">
                     {currentPainting.id} — {t(`paintings.${currentPainting.id}.title`)}
                   </h3>

@@ -1,0 +1,237 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "now": "Now",
+    "collection": "Collection",
+    "license": "Éditions limitées",
+    "licenseArt": "Licence d'art",
+    "contact": "Contact"
+  },
+  "languages": {
+    "fr": "FR",
+    "en": "EN",
+    "zh": "中",
+    "ko": "한",
+    "ja": "日"
+  },
+  "home": {
+    "welcome": "BIENVENUE",
+    "headline": "Artiste peintre\naux cactus bleus.",
+    "subtitle": "Le travail de Denis Verdier met en lumière une nature qui persiste là où la technologie déborde.",
+    "socialLinks": {
+      "instagram": "Instagram",
+      "youtube": "Youtube",
+      "tiktok": "Tik Tok",
+      "newsletter": "Newsletter"
+    },
+    "aboutTitle": "À propos",
+    "aboutParagraph1": "Le travail de Denis Verdier s'est d'abord construit autour d'un sujet récurrent : des cactus bleus fleuris, enracinés dans des vases de la Grèce antiques. Outsider du monde végétal, le cactus révèle un curieux contraste avec ses épines acérées et ses fleurs délicates. Grâce à son anatomie unique, il est capable de survivre dans des déserts hostiles. Ainsi, l'artiste s'identifie à sa capacité d'adaptation unique.",
+    "aboutParagraph2": "Issu d'un milieu où l'art n'était pas une évidence, Denis Verdier a toujours ressenti un décalage avec les codes établis (illustrés par les vases antiques). Il a trouvé dans le cactus un écho à son propre chemin : celui d'un être qui s'adapte, qui évolue, et qui finit par s'épanouir. Le bleu, omniprésent dans son travail, apporte une note de sérénité. Il traduit une adaptation douce dans une époque bruyante.",
+    "aboutParagraph3": "Avec le temps, son art s'enrichit d'une dimension plus engagée, résonnant au-delà de son histoire personnelle. Il détourne les vases grecs en les illustrant de scènes contemporaines, représentant certaines dérives de notre société, comme faisant parti du passé. Ces vases sont représentés brisés, puis réparés à la manière du kintsugi (art japonais de réparation de céramique), exprimant la capacité de l'humanité à reconnaître et réparer ses erreurs.",
+    "aboutParagraph4": "Ainsi à travers ses œuvres, il interroge la place de l'humain, soulignant son lien profond avec la nature et la résilience qui en émane."
+  },
+  "now": {
+    "metaTitle": "Now — Denis Verdier",
+    "metaDescription": "Ce sur quoi Denis Verdier travaille actuellement.",
+    "intro": "Une <link>page Now</link> est une idée initiée par Derek Sivers, un de mes auteurs préférés. Le concept est de partager en quelques mots les projets du moment sur une page dédiée. Cela vous permet d'en savoir plus sur mon focus actuel et favorise les connexions.",
+    "updated": "Mise à jour · Mars 2026 · À 20 min de Nîmes",
+    "weather": "Il fait encore frais en ce début de printemps.",
+    "title": "Qu'est-ce que\nje fais actuellement ?",
+    "production": {
+      "title": "Production artistique",
+      "content": "Le gros de mon travail actuel est d'avancer sur ma production artistique — la série Overdose, 10 toiles à l'huile explorant notre rapport à la technologie et à la nature. J'en suis à 5 tableaux réalisés sur 10. Le rythme change d'une semaine à l'autre, lié aux contraintes familiales et aux saisons de mariage de ma femme (photographe). Je teste également des petits formats aux pastels gras, de nouvelles marques de peinture et diverses techniques pour aller plus loin dans mon message et ma pratique."
+    },
+    "learning": {
+      "title": "En apprentissage",
+      "content": "Théorie des couleurs avancée, peinture à l'huile, exploration des pastels gras. Je lis et regarde beaucoup sur la peinture figurative contemporaine."
+    },
+    "upcoming": {
+      "title": "Projets à venir",
+      "content": "Finaliser les 10 toiles de la série Overdose. Lancer ce site et ouvrir les commandes de prints en édition limitée. Continuer à partager le processus sur Instagram et YouTube."
+    }
+  },
+  "collection": {
+    "metaTitle": "Collection Overdose — Denis Verdier",
+    "metaDescription": "Une collection de 10 toiles à l'acrylique et pastel gras explorant notre rapport à la technologie et à la nature.",
+    "title": "OVERDOSE",
+    "subtitle": "Une collection de 10 toiles à l'acrylique et pastel gras",
+    "description": "L'exposition traite de notre rapport entre la nature et la technologie. Chaque toile est un témoignage, un souvenir où la technologie est entrée dans ma vie. Des lecteurs mp3 aux smartphones... Je retrace l'épopée technologique de ces 20 dernières années à travers mon vécu et l'impact qu'elle a eu face à mon appréciation de la nature.",
+    "painting": {
+      "number": "N°{number} / 10",
+      "medium": "Acrylique et pastel gras sur toile",
+      "year": "2025–2026",
+      "dimensions": "Dimensions variables"
+    },
+    "paintings": {
+      "01": {
+        "title": "Le Lecteur MP3",
+        "caption": "Un lecteur MP3 abandonné, envahi par des succulentes — témoin silencieux d'une révolution musicale oubliée."
+      },
+      "02": {
+        "title": "Le Téléphone à Clapet",
+        "caption": "Un téléphone à clapet à moitié recouvert de mousse, souvenir d'une ère où l'on pouvait encore décrocher."
+      },
+      "03": {
+        "title": "L'iMac de Chambre",
+        "caption": "Un iMac G3 avec un cactus poussant dans le lecteur de disques — mélange nostalgique de technologie colorée et de nature persistante."
+      },
+      "04": {
+        "title": "Le Nokia",
+        "caption": "Un Nokia 3310 entrelacé de fleurs du désert — hommage à l'indestructible compagnon d'une génération."
+      },
+      "05": {
+        "title": "MSN & Skyblogs",
+        "caption": "Un ordinateur portable de l'ère MSN ouvert dans un champ d'herbes sauvages — vestige numérique d'une adolescence connectée."
+      },
+      "06": {
+        "title": "L'iPhone",
+        "caption": "Un iPhone original couché dans le sable avec l'ombre d'un cactus — le début d'une révolution qui a tout changé."
+      },
+      "07": {
+        "title": "Les Réseaux",
+        "caption": "Un badge de notification Facebook peint sur un vase grec, fissuré selon la méthode kintsugi — les réseaux sociaux comme reliques antiques."
+      },
+      "08": {
+        "title": "La Tablette",
+        "caption": "Une tablette reflétée dans une eau calme avec des nénuphars — la technologie qui flotte, détachée de la terre."
+      },
+      "09": {
+        "title": "Le Smartphone",
+        "caption": "Un smartphone face contre terre dans un sol riche, avec une pousse qui émerge — la nature reprend ses droits sur l'écran noir."
+      },
+      "10": {
+        "title": "L'IA",
+        "caption": "Une interface d'IA abstraite lentement envahie par des vignes grimpantes — le futur englouti par le présent éternel."
+      }
+    },
+    "lightbox": {
+      "close": "Fermer",
+      "previous": "Précédent",
+      "next": "Suivant"
+    }
+  },
+  "license": {
+    "metaTitle": "Éditions limitées — Denis Verdier",
+    "metaDescription": "Reproductions d'art numérotées et signées de la collection Overdose.",
+    "title": "Éditions limitées",
+    "intro": "Chaque print est une reproduction fidèle de l'oeuvre originale, imprimée sur papier Hahnemühle 308g fine art, numérotée et signée à la main. Un certificat d'authenticité est fourni avec chaque commande.",
+    "printTitle": "Collection Overdose",
+    "edition": "Édition limitée · 30 exemplaires",
+    "formats": {
+      "a4": "A4",
+      "a3": "A3",
+      "50x70": "50×70"
+    },
+    "price": "{price} €",
+    "orderButton": "Commander ce print",
+    "info": {
+      "title": "Informations",
+      "paper": "Impression sur papier Hahnemühle 308g Fine Art",
+      "numbered": "Numérotation et signature originale de l'artiste",
+      "certificate": "Certificat d'authenticité fourni",
+      "shipping": "Emballage soigné, expédition France & International",
+      "delay": "Délai : 10–15 jours ouvrés"
+    },
+    "modal": {
+      "title": "Commander un print",
+      "selectedPrint": "Print sélectionné",
+      "format": "Format",
+      "price": "Prix",
+      "name": "Nom",
+      "namePlaceholder": "Votre nom complet",
+      "email": "E-mail",
+      "emailPlaceholder": "votre@email.com",
+      "message": "Message (optionnel)",
+      "messagePlaceholder": "Instructions spéciales, questions...",
+      "submit": "Envoyer la demande",
+      "submitting": "Envoi...",
+      "success": "Envoyé !",
+      "cancel": "Annuler"
+    }
+  },
+  "contact": {
+    "metaTitle": "Contact — Denis Verdier",
+    "metaDescription": "Contactez Denis Verdier pour les commandes, collaborations ou questions.",
+    "title": "Contact",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "nameRequired": "Le nom est requis",
+      "email": "E-mail",
+      "emailPlaceholder": "votre@email.com",
+      "emailRequired": "L'e-mail est requis",
+      "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Sélectionner un sujet",
+      "subjectRequired": "Veuillez sélectionner un sujet",
+      "subjects": {
+        "original": "Commande d'oeuvre originale",
+        "print": "Commande de print",
+        "license": "Licence d'art",
+        "collaboration": "Collaboration / Presse",
+        "question": "Question",
+        "other": "Autre"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Votre message...",
+      "messageRequired": "Le message est requis",
+      "messageMin": "Le message doit contenir au moins 20 caractères",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    },
+    "info": {
+      "location": "Atelier situé à 20 min de Nîmes, Occitanie, France",
+      "responseTime": "Je réponds généralement sous 48h."
+    },
+    "lastRequest": "Dernière demande envoyée"
+  },
+  "footer": {
+    "copyright": "© 2026 Denis Verdier",
+    "location": "Atelier situé à 20 min de Nîmes, Occitanie",
+    "credit": "Site réalisé par l'artiste"
+  },
+  "social": {
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "tiktok": "TikTok",
+    "newsletter": "Newsletter"
+  },
+  "licenseArt": {
+    "metaTitle": "Licence d'art — Denis Verdier",
+    "metaDescription": "Proposez des licences d'art pour habiller vos produits et leur donner une identité singulière.",
+    "title": "Licence d'art",
+    "intro": "Je propose des licences d'art pour habiller vos produits et leur donner une identité singulière. Une collaboration simple, où l'œuvre rencontre l'objet.",
+    "gallery": {
+      "title": "Mon travail"
+    },
+    "what": {
+      "title": "Ce que c'est, concrètement",
+      "description": "Une licence d'art permet à une entreprise d'utiliser une œuvre existante ou une création sur mesure sur ses produits, en échange d'un accord définissant les conditions d'exploitation. L'œuvre devient ainsi partie intégrante de votre identité produit, sans vous approprier le travail de l'artiste."
+    },
+    "why": {
+      "title": "Pourquoi ça peut vous intéresser",
+      "point1": "Un produit habillé d'une œuvre originale raconte une histoire — celle de l'artiste, celle de l'objet, et celle de la rencontre entre les deux.",
+      "point2": "Une œuvre singulière permet à votre produit de se distinguer, de créer une présence différente en rayon ou en ligne.",
+      "point3": "L'art apporte une valeur perçue — un émotion, une intention, un regard — que le design seul ne toujours pas véhiculer."
+    },
+    "cta": {
+      "title": "Vous avez un projet ? Discutons-en.",
+      "button": "Me contacter"
+    },
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "E-mail",
+      "emailPlaceholder": "votre@email.com",
+      "company": "Entreprise",
+      "companyPlaceholder": "Nom de votre entreprise",
+      "message": "Message",
+      "messagePlaceholder": "Décrivez votre projet, le type de produit, le contexte...",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !"
+    }
+  }
+}

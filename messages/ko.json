@@ -1,0 +1,224 @@
+{
+  "navigation": {
+    "home": "홈",
+    "now": "지금",
+    "collection": "컬렉션",
+    "license": "한정판",
+    "licenseArt": "아트 라이선스",
+    "contact": "연락처"
+  },
+  "languages": {
+    "fr": "FR",
+    "en": "EN",
+    "zh": "中",
+    "ko": "한",
+    "ja": "日"
+  },
+  "home": {
+    "welcome": "환영합니다",
+    "headline": "푸른 선인장\n화가",
+    "subtitle": "Denis Verdier의 작품은 기술이 넘쳐나는 곳에서도 지속되는 자연을 조명합니다.",
+    "socialLinks": {
+      "instagram": "Instagram",
+      "youtube": "Youtube",
+      "tiktok": "Tik Tok",
+      "newsletter": "뉴스레터"
+    },
+    "aboutTitle": "소개",
+    "aboutParagraph1": "Denis Verdier의 작품은 처음에 반복되는 주제를 중심으로 구축되었습니다: 고대 그리스 도자기에 뿌리를 내린 푸른 꽃이 핀 선인장들. 식물 세계의 아웃사이더로서, 선인장은 날카로운 가시와 섬세한 꽃의 기묘한 대비를 드러냅니다. 독특한 해부학 덕분에 척박한 사막에서도 생존할 수 있습니다. 따라서 예술가는 그 독특한 적응 능력에 동감합니다.",
+    "aboutParagraph2": "예술이 당연하지 않은 환경에서 온 Denis Verdier는 항상 확립된 규범(고대 도자기로 상징됨)과의 괴리를 느꼈습니다. 그는 선인장에서 자신의 여정을 되찾았습니다: 적응하고, 진화하고, 마침내 피어나는 존재의 여정. 그의 작업에 편재하는 푸른색은 평온함을 가져다줍니다. 시끄러운 시대에 부드러운 적응을 표현합니다.",
+    "aboutParagraph3": "시간이 지나면서 그의 예술은 개인적 역사를 넘어 울려 퍼지는 더 참여적인 차원으로 풍요로워졌습니다. 그는 그리스 도자기를 현대적인 장면으로 변형하여 우리 사회의 특정 편향들을 마치 과거의 일처럼 표현합니다. 이 도자기들은 부서진 후 긴수기(일본 도자기 수리 예술) 방식으로 수리되어 표현되며, 인류의 실수를 인정하고 고칠 수 있는 능력을 표현합니다.",
+    "aboutParagraph4": "이렇게 그의 작품을 통해 그는 인간의 위치를 질문하며, 자연과의 깊은 연결과 그로부터 발산되는 회복력을 강조합니다."
+  },
+  "now": {
+    "metaTitle": "지금 — Denis Verdier",
+    "metaDescription": "Denis Verdier가 현재 작업하고 있는 것.",
+    "intro": "<link>Now 페이지</link>는 내가 가장 좋아하는 작가 중 한 명인 Derek Sivers가 시작한 아이디어입니다. 개념은 전용 페이지에서 현재 프로젝트를 몇 마디로 공유하는 것입니다. 이를 통해 내 현재 집중점에 대해 더 알 수 있고 연결을 촉진합니다.",
+    "updated": "업데이트 · 2026년 3월 · 님에서 20분",
+    "weather": "초봄이라 아직 쌀쌀합니다.",
+    "title": "지금 나는\n무엇을 하고 있을까?",
+    "production": {
+      "title": "예술적 창작",
+      "content": "현재 작업의 대부분은 예술적 창작을 진행하는 것입니다 — Overdose 시리즈, 기술과 자연과의 관계를 탐구하는 10점의 유화. 10점 중 5점을 완성했습니다. 리듬은 주마다 변하는데, 가족 제약과 아내(사진작가)의 결혼 시즌과 관련이 있습니다. 작은 포맷의 파스텔, 새로운 물감 브랜드, 다양한 기법을 테스트하며 메시지와 실천을 더 깊이 발전시키고 있습니다."
+    },
+    "learning": {
+      "title": "학습 중",
+      "content": "고급 색채 이론, 유화, 파스텔 탐구. 현대 구상 회화에 대해 많이 읽고 봅니다."
+    },
+    "upcoming": {
+      "title": "다가오는 프로젝트",
+      "content": "Overdose 시리즈의 10점 완성. 이 사이트를 출시하고 한정판 프린트 주문을 열기. Instagram과 YouTube에서 과정을 계속 공유하기."
+    }
+  },
+  "collection": {
+    "metaTitle": "Overdose 컬렉션 — Denis Verdier",
+    "metaDescription": "기술과 자연과의 관계를 탐구하는 10점의 아크릴 및 파스텔 컬렉션.",
+    "title": "OVERDOSE",
+    "subtitle": "10점의 아크릴 및 파스텔 유화 컬렉션",
+    "description": "이 전시는 자연과 기술 사이의 우리의 관계를 탐구합니다. 각 그림은 증언이자, 기술이 내 삶에 들어온 기억입니다. MP3 플레이어에서 스마트폰까지... 지난 20년간의 기술 여정을 내 경험과 자연에 대한 감상에 미친 영향을 통해 추적합니다.",
+    "painting": {
+      "number": "N°{number} / 10",
+      "medium": "캔버스 아크릴 및 파스텔",
+      "year": "2025–2026",
+      "dimensions": "다양한 크기"
+    },
+    "paintings": {
+      "01": {
+        "title": "MP3 플레이어",
+        "caption": "다육식물에 뒤덮인 버려진 MP3 플레이어 — 잊혀진 음악 혁명의 침묵의 증인."
+      },
+      "02": {
+        "title": "플립폰",
+        "caption": "이끼로 반쯤 덮인 플립폰, 전화를 끊을 수 있었던 시대의 기억."
+      },
+      "03": {
+        "title": "침실 iMac",
+        "caption": "디스크 드라이브에서 선인장이 자라는 iMac G3 — 색채 넘치는 기술과 지속되는 자연의 향수 어린 융합."
+      },
+      "04": {
+        "title": "노키아",
+        "caption": "사막 꽃으로 감싸인 노키아 3310 — 한 세대의 파괴 불가능한 동반자에 대한 헌사."
+      },
+      "05": {
+        "title": "MSN과 스카이블로그",
+        "caption": "야생 풀밭에서 열린 MSN 시대 노트북 — 연결된 청소년기의 디지털 유적."
+      },
+      "06": {
+        "title": "아이폰",
+        "caption": "모래에 누워 선인장 그림자를 드리우는 오리지널 아이폰 — 모든 것을 바꾼 혁명의 시작."
+      },
+      "07": {
+        "title": "소셜 네트워크",
+        "caption": "그리스 도자기에 그려진 페이스북 알림 배지, 긴수기 스타일로 균열 — 고대 유물로서의 소셜 네트워크."
+      },
+      "08": {
+        "title": "태블릿",
+        "caption": "수련과 함께 고요한 물에 비친 태블릿 — 대지에서 분리되어 떠 있는 기술."
+      },
+      "09": {
+        "title": "스마트폰",
+        "caption": "비옥한 흙에 엎어진 스마트폰, 새싹이 돋아나고 있음 — 검은 화면 위로 권리를 되찾는 자연."
+      },
+      "10": {
+        "title": "인공지능",
+        "caption": "덩굴에 천천히 잠식되는 추상적인 AI 인터페이스 — 영원한 현재에 삼켜진 미래."
+      }
+    },
+    "lightbox": {
+      "close": "닫기",
+      "previous": "이전",
+      "next": "다음"
+    }
+  },
+  "license": {
+    "metaTitle": "한정판 — Denis Verdier",
+    "metaDescription": "Overdose 컬렉션의 번호가 매겨지고 서명된 미술 복제품.",
+    "title": "한정판",
+    "intro": "각 프린트는 원작의 충실한 복제품으로, Hahnemühle 308g 파인아트 용지에 인쇄되고 번호와 서명이 되어 있습니다. 각 주문에는 진품 증명서가 제공됩니다.",
+    "printTitle": "Overdose 컬렉션",
+    "edition": "한정판 · 30부",
+    "formats": {
+      "a4": "A4",
+      "a3": "A3",
+      "50x70": "50×70"
+    },
+    "price": "{price} €",
+    "orderButton": "이 프린트 주문",
+    "info": {
+      "title": "정보",
+      "paper": "Hahnemühle 308g 파인아트 용지에 인쇄",
+      "numbered": "작가의 번호 및 서명",
+      "certificate": "진품 증명서 포함",
+      "shipping": "정교한 포장, 프랑스 및 국제 배송",
+      "delay": "소요 시간: 10–15 영업일"
+    },
+    "modal": {
+      "title": "프린트 주문",
+      "selectedPrint": "선택된 프린트",
+      "format": "크기",
+      "price": "가격",
+      "name": "이름",
+      "namePlaceholder": "전체 이름",
+      "email": "이메일",
+      "emailPlaceholder": "your@email.com",
+      "message": "메시지 (선택사항)",
+      "messagePlaceholder": "특별 요청, 질문...",
+      "submit": "요청 보내기",
+      "submitting": "전송 중...",
+      "success": "전송 완료!",
+      "cancel": "취소"
+    }
+  },
+  "contact": {
+    "metaTitle": "연락처 — Denis Verdier",
+    "metaDescription": "의뢰, 협업 또는 질문을 위해 Denis Verdier에게 연락하세요.",
+    "title": "연락처",
+    "form": {
+      "name": "이름",
+      "namePlaceholder": "이름",
+      "nameRequired": "이름은 필수입니다",
+      "email": "이메일",
+      "emailPlaceholder": "your@email.com",
+      "emailRequired": "이메일은 필수입니다",
+      "emailInvalid": "유효한 이메일 주소를 입력하세요",
+      "subject": "주제",
+      "subjectPlaceholder": "주제 선택",
+      "subjectRequired": "주제를 선택하세요",
+      "subjects": {
+        "original": "원작 의뢰",
+        "print": "프린트 주문",
+        "license": "아트 라이선스",
+        "collaboration": "협업 / 언론",
+        "question": "질문",
+        "other": "기타"
+      },
+      "message": "메시지",
+      "messagePlaceholder": "메시지...",
+      "messageRequired": "메시지는 필수입니다",
+      "messageMin": "메시지는 최소 20자 이상이어야 합니다",
+      "submit": "보내기",
+      "sending": "보내는 중...",
+      "success": "메시지가 성공적으로 전송되었습니다!",
+      "error": "오류가 발생했습니다. 다시 시도하세요."
+    },
+    "info": {
+      "location": "아틀리에, 님에서 20분 거리, 옥시타니, 프랑스",
+      "responseTime": "일반적으로 48시간 이내에 답변합니다."
+    },
+    "lastRequest": "마지막으로 보낸 요청"
+  },
+  "footer": {
+    "copyright": "© 2026 Denis Verdier",
+    "location": "아틀리에, 님에서 20분 거리, 옥시타니",
+    "credit": "아티스트가 제작한 사이트"
+  },
+  "social": {
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "tiktok": "TikTok",
+    "newsletter": "뉴스레터"
+  },
+  "licenseArt": {
+    "metaTitle": "아트 라이선스 — Denis Verdier",
+    "metaDescription": "제품에 독특한 아이덴티티를 부여하는 아트 라이선스를 제안합니다.",
+    "title": "아트 라이선스",
+    "intro": "제품에 독특한 아이덴티티를 부여하는 아트 라이선스를 제안합니다. 예술 작품과 사물이 만나는 간단한 협업.",
+    "gallery": {
+      "title": "나의 작업"
+    },
+    "what": {
+      "title": "구체적으로 무엇인가",
+      "description": "아트 라이선스는 기업이 기존 작품이나 맞춤 제작을 제품에 사용할 수 있게 하며, 사용 조건을 정의하는 계약을 교환으로 합니다. 작품은 제품 아이덴티티의 일부가 되지만, 예술가의 작업을 독점하는 것이 아닙니다."
+    },
+    "why": {
+      "title": "왜 관심이 있을 수 있을까요",
+      "point1": "원작으로 꾸민 제품은 이야기를 전합니다 — 예술가의 이야기, 사물의 이야기, 그리고 두 세계의 만남.",
+      "point2": "독특한 작품은 제품이 매장이나 온라인에서 다른 존재감을 만들어 차별화합니다.",
+      "point3": "예술은 인지된 가치를 더합니다 — 감정, 의도, 시선 — 이는 디자인만으로는 전달할 수 없는 것입니다."
+    },
+    "cta": {
+      "title": "프로젝트가 있으신가요? 이야기해 보세요.",
+      "button": "연락하기"
+    }
+  }
+}

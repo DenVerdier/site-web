@@ -1,0 +1,224 @@
+{
+  "navigation": {
+    "home": "首页",
+    "now": "现在",
+    "collection": "作品集",
+    "license": "限量版",
+    "licenseArt": "艺术授权",
+    "contact": "联系"
+  },
+  "languages": {
+    "fr": "FR",
+    "en": "EN",
+    "zh": "中",
+    "ko": "한",
+    "ja": "日"
+  },
+  "home": {
+    "welcome": "欢迎",
+    "headline": "蓝色仙人掌\n画家",
+    "subtitle": "Denis Verdier的作品突显了一种在科技泛滥中依然存续的自然。",
+    "socialLinks": {
+      "instagram": "Instagram",
+      "youtube": "Youtube",
+      "tiktok": "Tik Tok",
+      "newsletter": "通讯"
+    },
+    "aboutTitle": "关于",
+    "aboutParagraph1": "Denis Verdier的作品最初围绕着反复出现的主题构建：蓝色开花仙人掌，扎根于古希腊花瓶中。作为植物世界的局外人，仙人掌以其尖锐的刺和娇嫩的花朵展现出奇特的对比。凭借其独特的构造，它能在恶劣的沙漠中生存。因此，艺术家认同其独特的适应能力。",
+    "aboutParagraph2": "来自一个艺术并非理所当然的背景，Denis Verdier一直感到与既定规范（以古花瓶为代表）存在差距。他在仙人掌中找到了自己道路的回响：一个适应、进化并最终绽放的存在。蓝色在他的作品中无处不在，带来宁静的气息。它诠释了一个嘈杂时代中的温和适应。",
+    "aboutParagraph3": "随着时间的推移，他的艺术融入了更深层的参与感，超越了他的个人历史。他将希腊花瓶进行改编，描绘当代场景，展现我们社会的某些偏差，仿佛已成为过去。这些花瓶被表现为破碎后以金缮方式（日本陶瓷修复艺术）修复，表达了人类认识和修复错误的能力。",
+    "aboutParagraph4": "因此，通过他的作品，他质疑人类的位置，强调人与自然的深层联系以及从中散发出的韧性。"
+  },
+  "now": {
+    "metaTitle": "现在 — Denis Verdier",
+    "metaDescription": "Denis Verdier目前正在进行的工作。",
+    "intro": "<link>Now页面</link>是Derek Sivers（我最喜欢的作家之一）发起的一个想法。概念是在一个专门的页面上用几句话分享当前的项目。这让你能更多地了解我目前的关注点，并促进联系。",
+    "updated": "更新 · 2026年3月 · 距尼姆20分钟",
+    "weather": "初春时节，天气依然凉爽。",
+    "title": "我现在\n正在做什么？",
+    "production": {
+      "title": "艺术创作",
+      "content": "我目前工作的重点是推进我的艺术创作——Overdose系列，10幅探索我们与科技和自然关系的油画。我已经完成了10幅中的5幅。节奏每周都在变化，这与家庭限制和我妻子（摄影师）的婚礼季节有关。我也在测试油画棒小幅作品，新的颜料品牌和各种技法，以进一步深化我的信息和实践。"
+    },
+    "learning": {
+      "title": "学习中",
+      "content": "高级色彩理论，油画技法，油画棒探索。我阅读和观看大量关于当代具象绘画的内容。"
+    },
+    "upcoming": {
+      "title": "即将进行的项目",
+      "content": "完成Overdose系列的10幅画作。推出这个网站并开放限量版版画订购。继续在Instagram和YouTube上分享创作过程。"
+    }
+  },
+  "collection": {
+    "metaTitle": "Overdose作品集 — Denis Verdier",
+    "metaDescription": "一个探索我们与科技和自然关系的10幅丙烯和油画棒作品系列。",
+    "title": "OVERDOSE",
+    "subtitle": "一个10幅丙烯和油画棒作品的系列",
+    "description": "展览探讨了我们与自然和科技之间的关系。每幅画都是一个见证，一个科技进入我生活的记忆。从MP3播放器到智能手机......我通过个人经历追溯过去20年的科技历程及其对我欣赏自然的影响。",
+    "painting": {
+      "number": "第{number}幅 / 10",
+      "medium": "布面丙烯和油画棒",
+      "year": "2025–2026",
+      "dimensions": "尺寸不一"
+    },
+    "paintings": {
+      "01": {
+        "title": "MP3播放器",
+        "caption": "一个被遗弃的MP3播放器，被多肉植物所占据——一场被遗忘音乐革命的沉默见证者。"
+      },
+      "02": {
+        "title": "翻盖手机",
+        "caption": "一部半覆盖着苔藓的翻盖手机，一个我们还能挂断电话的时代的记忆。"
+      },
+      "03": {
+        "title": "卧室iMac",
+        "caption": "一台iMac G3，光驱中长出一棵仙人掌——彩色科技与持久自然的怀旧融合。"
+      },
+      "04": {
+        "title": "诺基亚",
+        "caption": "一部被沙漠花朵缠绕的诺基亚3310——向一代人的坚不可摧的伙伴致敬。"
+      },
+      "05": {
+        "title": "MSN与博客",
+        "caption": "一台MSN时代的笔记本电脑在野草丛中打开——一个互联网连接青春的数字遗迹。"
+      },
+      "06": {
+        "title": "iPhone",
+        "caption": "一部初代iPhone躺在沙地上，投下仙人掌的影子——一场改变一切的革命的开始。"
+      },
+      "07": {
+        "title": "社交网络",
+        "caption": "一个Facebook通知徽章绘制在希腊花瓶上，以金缮风格裂开——社交网络如古代遗物。"
+      },
+      "08": {
+        "title": "平板电脑",
+        "caption": "一台平板电脑倒映在平静的水面上，周围有睡莲——漂浮的科技，与大地分离。"
+      },
+      "09": {
+        "title": "智能手机",
+        "caption": "一部智能手机面朝下躺在肥沃的土壤中，一株幼苗正在萌发——自然正在黑屏上重新夺回权利。"
+      },
+      "10": {
+        "title": "人工智能",
+        "caption": "一个抽象的人工智能界面正被攀爬的藤蔓慢慢吞噬——未来被永恒的现在吞没。"
+      }
+    },
+    "lightbox": {
+      "close": "关闭",
+      "previous": "上一幅",
+      "next": "下一幅"
+    }
+  },
+  "license": {
+    "metaTitle": "限量版 — Denis Verdier",
+    "metaDescription": "Overdose系列的限量编号签名艺术复制品。",
+    "title": "限量版",
+    "intro": "每幅版画都是原作的忠实复制品，印在Hahnemühle 308g艺术纸上，手工编号签名。每份订单都附有真品证书。",
+    "printTitle": "Overdose系列",
+    "edition": "限量版 · 30份",
+    "formats": {
+      "a4": "A4",
+      "a3": "A3",
+      "50x70": "50×70"
+    },
+    "price": "{price} €",
+    "orderButton": "订购此版画",
+    "info": {
+      "title": "信息",
+      "paper": "印制于Hahnemühle 308g艺术纸",
+      "numbered": "艺术家亲笔编号签名",
+      "certificate": "附真品证书",
+      "shipping": "精心包装，法国及国际配送",
+      "delay": "周期：10–15个工作日"
+    },
+    "modal": {
+      "title": "订购版画",
+      "selectedPrint": "已选版画",
+      "format": "尺寸",
+      "price": "价格",
+      "name": "姓名",
+      "namePlaceholder": "您的全名",
+      "email": "电子邮件",
+      "emailPlaceholder": "your@email.com",
+      "message": "留言（可选）",
+      "messagePlaceholder": "特殊说明，问题...",
+      "submit": "发送请求",
+      "submitting": "发送中...",
+      "success": "已发送！",
+      "cancel": "取消"
+    }
+  },
+  "contact": {
+    "metaTitle": "联系 — Denis Verdier",
+    "metaDescription": "联系Denis Verdier进行委托、合作或咨询。",
+    "title": "联系",
+    "form": {
+      "name": "姓名",
+      "namePlaceholder": "您的姓名",
+      "nameRequired": "姓名为必填项",
+      "email": "电子邮件",
+      "emailPlaceholder": "your@email.com",
+      "emailRequired": "电子邮件为必填项",
+      "emailInvalid": "请输入有效的电子邮件地址",
+      "subject": "主题",
+      "subjectPlaceholder": "选择主题",
+      "subjectRequired": "请选择主题",
+      "subjects": {
+        "original": "原作委托",
+        "print": "版画订购",
+        "license": "艺术授权",
+        "collaboration": "合作/媒体",
+        "question": "问题咨询",
+        "other": "其他"
+      },
+      "message": "留言",
+      "messagePlaceholder": "您的留言...",
+      "messageRequired": "留言为必填项",
+      "messageMin": "留言至少需要20个字符",
+      "submit": "发送",
+      "sending": "发送中...",
+      "success": "留言发送成功！",
+      "error": "发生错误，请重试。"
+    },
+    "info": {
+      "location": "工作室位于距尼姆20分钟，奥克西塔尼，法国",
+      "responseTime": "我通常在48小时内回复。"
+    },
+    "lastRequest": "上次发送的请求"
+  },
+  "footer": {
+    "copyright": "© 2026 Denis Verdier",
+    "location": "工作室位于距尼姆20分钟，奥克西塔尼",
+    "credit": "网站由艺术家创建"
+  },
+  "social": {
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "tiktok": "TikTok",
+    "newsletter": "通讯"
+  },
+  "licenseArt": {
+    "metaTitle": "艺术授权 — Denis Verdier",
+    "metaDescription": "提供艺术授权，为您的产品赋予独特的身份。",
+    "title": "艺术授权",
+    "intro": "我提供艺术授权，为您的产品赋予独特的身份。一次简单的合作，让艺术作品与物品相遇。",
+    "gallery": {
+      "title": "我的作品"
+    },
+    "what": {
+      "title": "具体是什么",
+      "description": "艺术授权允许企业在产品上使用现有作品或定制创作，以定义使用条件的协议作为交换。作品因此成为您产品身份的一部分，而非占有艺术家的创作。"
+    },
+    "why": {
+      "title": "为什么您可能会感兴趣",
+      "point1": "一件以原创作品装扮的产品讲述着故事——艺术家的故事、物品的故事，以及两者相遇的故事。",
+      "point2": "一件独特的作品让您的产品脱颖而出，在货架或线上创造不同的存在感。",
+      "point3": "艺术带来感知价值——一种情感、一种意图、一种视角——这是单纯的设计无法完全传达的。"
+    },
+    "cta": {
+      "title": "有项目？让我们谈谈。",
+      "button": "联系我"
+    }
+  }
+}

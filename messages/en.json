@@ -1,0 +1,224 @@
+{
+  "navigation": {
+    "home": "Home",
+    "now": "Now",
+    "collection": "Collection",
+    "license": "Limited Editions",
+    "licenseArt": "Art Licensing",
+    "contact": "Contact"
+  },
+  "languages": {
+    "fr": "FR",
+    "en": "EN",
+    "zh": "中",
+    "ko": "한",
+    "ja": "日"
+  },
+  "home": {
+    "welcome": "WELCOME",
+    "headline": "Painter artist\nof blue cacti.",
+    "subtitle": "Denis Verdier's work highlights a nature that persists where technology overflows.",
+    "socialLinks": {
+      "instagram": "Instagram",
+      "youtube": "Youtube",
+      "tiktok": "Tik Tok",
+      "newsletter": "Newsletter"
+    },
+    "aboutTitle": "About",
+    "aboutParagraph1": "Denis Verdier's work was first built around a recurring subject: blue flowering cacti, rooted in ancient Greek vases. An outsider to the plant world, the cactus reveals a curious contrast with its sharp spines and delicate flowers. Thanks to its unique anatomy, it is capable of surviving in hostile deserts. Thus, the artist identifies with its unique capacity for adaptation.",
+    "aboutParagraph2": "Coming from a background where art was not obvious, Denis Verdier always felt a gap with established codes (illustrated by ancient vases). He found in the cactus an echo of his own path: that of a being who adapts, evolves, and finally blossoms. The blue, omnipresent in his work, brings a note of serenity. It translates a gentle adaptation in a noisy era.",
+    "aboutParagraph3": "Over time, his art has enriched itself with a more engaged dimension, resonating beyond his personal history. He diverts Greek vases by illustrating them with contemporary scenes, representing certain drifts of our society, as if they were part of the past. These vases are represented broken, then repaired in the kintsugi style (Japanese art of ceramic repair), expressing humanity's capacity to recognize and repair its mistakes.",
+    "aboutParagraph4": "Thus through his works, he questions the place of humans, highlighting their deep link with nature and the resilience that emanates from it."
+  },
+  "now": {
+    "metaTitle": "Now — Denis Verdier",
+    "metaDescription": "What Denis Verdier is currently working on.",
+    "intro": "A <link>Now page</link> is an idea initiated by Derek Sivers, one of my favorite authors. The concept is to share in a few words the current projects on a dedicated page. This allows you to know more about my current focus and fosters connections.",
+    "updated": "Updated · March 2026 · 20 min from Nîmes",
+    "weather": "It's still fresh in this early spring.",
+    "title": "What am I\ndoing right now?",
+    "production": {
+      "title": "Artistic production",
+      "content": "The bulk of my current work is advancing my artistic production — the Overdose series, 10 oil paintings exploring our relationship with technology and nature. I'm at 5 paintings completed out of 10. The rhythm changes from week to week, linked to family constraints and my wife's wedding seasons (photographer). I'm also testing small formats with oil pastels, new paint brands, and various techniques to go further in my message and practice."
+    },
+    "learning": {
+      "title": "Learning",
+      "content": "Advanced color theory, oil painting, exploration of oil pastels. I read and watch a lot about contemporary figurative painting."
+    },
+    "upcoming": {
+      "title": "Upcoming projects",
+      "content": "Complete the 10 paintings of the Overdose series. Launch this site and open limited edition print orders. Continue sharing the process on Instagram and YouTube."
+    }
+  },
+  "collection": {
+    "metaTitle": "Overdose Collection — Denis Verdier",
+    "metaDescription": "A collection of 10 acrylic and oil pastel paintings exploring our relationship with technology and nature.",
+    "title": "OVERDOSE",
+    "subtitle": "A collection of 10 acrylic and oil pastel paintings",
+    "description": "The exhibition explores our relationship between nature and technology. Each painting is a testimony, a memory where technology entered my life. From MP3 players to smartphones... I trace the technological journey of the past 20 years through my personal experience and its impact on my appreciation of nature.",
+    "painting": {
+      "number": "N°{number} / 10",
+      "medium": "Acrylic and oil pastel on canvas",
+      "year": "2025–2026",
+      "dimensions": "Variable dimensions"
+    },
+    "paintings": {
+      "01": {
+        "title": "The MP3 Player",
+        "caption": "An abandoned MP3 player, overrun by succulents — silent witness of a forgotten musical revolution."
+      },
+      "02": {
+        "title": "The Flip Phone",
+        "caption": "A flip phone half-covered in moss, a memory of an era when we could still hang up."
+      },
+      "03": {
+        "title": "The Bedroom iMac",
+        "caption": "An iMac G3 with a cactus growing from the disk drive — nostalgic blend of colorful technology and persistent nature."
+      },
+      "04": {
+        "title": "The Nokia",
+        "caption": "A Nokia 3310 entwined with desert flowers — tribute to the indestructible companion of a generation."
+      },
+      "05": {
+        "title": "MSN & Skyblogs",
+        "caption": "An MSN-era laptop open in a field of wild grasses — digital vestige of a connected adolescence."
+      },
+      "06": {
+        "title": "The iPhone",
+        "caption": "An original iPhone lying in sand with cactus shadow — the beginning of a revolution that changed everything."
+      },
+      "07": {
+        "title": "Social Networks",
+        "caption": "A Facebook notification badge painted on a Greek vase, cracked kintsugi-style — social networks as ancient relics."
+      },
+      "08": {
+        "title": "The Tablet",
+        "caption": "A tablet reflected in still water with lily pads — technology floating, detached from the earth."
+      },
+      "09": {
+        "title": "The Smartphone",
+        "caption": "A smartphone face-down in rich soil, with a seedling emerging — nature reclaiming its rights over the black screen."
+      },
+      "10": {
+        "title": "AI",
+        "caption": "An abstract AI interface slowly consumed by climbing vines — the future swallowed by the eternal present."
+      }
+    },
+    "lightbox": {
+      "close": "Close",
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "license": {
+    "metaTitle": "Limited Editions — Denis Verdier",
+    "metaDescription": "Numbered and signed fine art reproductions from the Overdose collection.",
+    "title": "Limited Editions",
+    "intro": "Each print is a faithful reproduction of the original work, printed on Hahnemühle 308g fine art paper, numbered and signed by hand. A certificate of authenticity is provided with each order.",
+    "printTitle": "Overdose Collection",
+    "edition": "Limited edition · 30 copies",
+    "formats": {
+      "a4": "A4",
+      "a3": "A3",
+      "50x70": "50×70"
+    },
+    "price": "{price} €",
+    "orderButton": "Order this print",
+    "info": {
+      "title": "Information",
+      "paper": "Printed on Hahnemühle 308g Fine Art paper",
+      "numbered": "Numbering and original artist signature",
+      "certificate": "Certificate of authenticity included",
+      "shipping": "Careful packaging, France & International shipping",
+      "delay": "Delay: 10–15 business days"
+    },
+    "modal": {
+      "title": "Order a print",
+      "selectedPrint": "Selected print",
+      "format": "Format",
+      "price": "Price",
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message (optional)",
+      "messagePlaceholder": "Special instructions, questions...",
+      "submit": "Send request",
+      "submitting": "Sending...",
+      "success": "Sent!",
+      "cancel": "Cancel"
+    }
+  },
+  "contact": {
+    "metaTitle": "Contact — Denis Verdier",
+    "metaDescription": "Contact Denis Verdier for commissions, collaborations or questions.",
+    "title": "Contact",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "nameRequired": "Name is required",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "subjectRequired": "Please select a subject",
+      "subjects": {
+        "original": "Original artwork commission",
+        "print": "Print order",
+        "license": "Art licensing",
+        "collaboration": "Collaboration / Press",
+        "question": "Question",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Your message...",
+      "messageRequired": "Message is required",
+      "messageMin": "Message must be at least 20 characters",
+      "submit": "Send",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "location": "Studio located 20 min from Nîmes, Occitanie, France",
+      "responseTime": "I generally respond within 48h."
+    },
+    "lastRequest": "Last request sent"
+  },
+  "footer": {
+    "copyright": "© 2026 Denis Verdier",
+    "location": "Studio located 20 min from Nîmes, Occitanie",
+    "credit": "Site created by the artist"
+  },
+  "social": {
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "tiktok": "TikTok",
+    "newsletter": "Newsletter"
+  },
+  "licenseArt": {
+    "metaTitle": "Art Licensing — Denis Verdier",
+    "metaDescription": "Offer art licenses to dress your products and give them a singular identity.",
+    "title": "Art Licensing",
+    "intro": "I offer art licenses to dress your products and give them a singular identity. A simple collaboration, where the artwork meets the object.",
+    "gallery": {
+      "title": "My Work"
+    },
+    "what": {
+      "title": "What it is, concretely",
+      "description": "An art license allows a company to use an existing work or a custom creation on its products, in exchange for an agreement defining the conditions of use. The artwork thus becomes an integral part of your product identity, without appropriating the artist's work."
+    },
+    "why": {
+      "title": "Why it may interest you",
+      "point1": "A product dressed with an original work tells a story — that of the artist, the object, and the meeting of both.",
+      "point2": "A singular work allows your product to stand out, to create a different presence on the shelf or online.",
+      "point3": "Art brings a perceived value — an emotion, an intention, a perspective — that design alone cannot always convey."
+    },
+    "cta": {
+      "title": "Have a project? Let's discuss.",
+      "button": "Contact me"
+    }
+  }
+}

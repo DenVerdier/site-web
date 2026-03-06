@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ExternalLink } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
@@ -68,10 +68,10 @@ export default function Navigation() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="nav-tab text-sm font-medium text-text-secondary hover:text-text-primary transition-colors duration-300 flex items-center gap-1"
+                    className="nav-tab text-sm font-medium text-text-secondary hover:text-text-primary transition-colors duration-300 flex items-center gap-0.5"
                   >
                     {item.label}
-                    <ExternalLink size={12} className="inline-block" />
+                    <ArrowUpRight size={14} />
                   </a>
                 ) : (
                   <Link
@@ -129,10 +129,10 @@ export default function Navigation() {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => setIsOpen(false)}
-                          className="flex items-center gap-1 py-2.5 px-3 text-base font-medium rounded-sm text-text-secondary hover:bg-accent hover:text-white transition-all duration-300"
+                          className="flex items-center gap-0.5 py-2.5 px-3 text-base font-medium rounded-sm text-text-secondary hover:bg-accent hover:text-white transition-all duration-300"
                         >
                           {item.label}
-                          <ExternalLink size={12} />
+                          <ArrowUpRight size={14} />
                         </a>
                       ) : (
                         <Link

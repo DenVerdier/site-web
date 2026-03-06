@@ -18,7 +18,6 @@ export default function Navigation() {
     { href: '/', label: t('home') },
     { href: '/now', label: t('now') },
     { href: '/collection', label: t('collection') },
-    { href: '/editions-limitees', label: t('license') },
     { href: '/license-art', label: t('licenseArt') },
     { href: '/contact', label: t('contact') },
   ];

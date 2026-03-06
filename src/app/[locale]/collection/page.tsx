@@ -20,7 +20,13 @@ const paintings = [
     available: true,
     price: '1 270 €'
   },
-  { id: '02', images: ['/images/collection/02-lage-du-smartphone.jpg'], dimensions: '46 × 55 cm', available: false, price: '' },
+  { id: '02', images: [
+      '/images/collection/02-lage-du-smartphone.jpg',
+      '/images/collection/02-lage-du-smartphone-1.jpg',
+      '/images/collection/02-lage-du-smartphone-2.jpg',
+      '/images/collection/02-lage-du-smartphone-3.jpg',
+      '/images/collection/02-lage-du-smartphone-4.jpg',
+    ], dimensions: '46 × 55 cm', available: true, price: '1 010 €' },
   { id: '03', images: ['/images/collection/03-lage-du-jeu-video.jpg'], dimensions: '73 × 54 cm', available: false, price: '' },
   { id: '04', images: ['/images/collection/04-lage-de-lordinateur.jpg'], dimensions: '73 × 54 cm', available: false, price: '' },
   { id: '05', images: ['/images/collection/05-lage-de-lordinateur-portable.jpg'], dimensions: '92 × 65 cm', available: false, price: '' },

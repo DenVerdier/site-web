@@ -288,7 +288,7 @@ export default function CollectionPage() {
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-green-400/60 mb-5">
                       <span className="text-green-400 text-xs animate-pulse">●</span>
                       <p className="text-xs text-white/70">
-                        Toile disponible à l'achat — Prix : {currentPainting.price}
+                        Toile disponible — Prix : {currentPainting.price}
                       </p>
                     </div>
                   )}

@@ -6,24 +6,25 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
-// Painting data with dimensions
+// Painting data with dimensions and multiple images
 const paintings = [
-  { id: '01', image: '/images/collection/01-lage-du-mp3.jpg', dimensions: '73 × 54 cm' },
-  { id: '02', image: '/images/collection/02-lage-du-smartphone.jpg', dimensions: '46 × 55 cm' },
-  { id: '03', image: '/images/collection/03-lage-du-jeu-video.jpg', dimensions: '73 × 54 cm' },
-  { id: '04', image: '/images/collection/04-lage-de-lordinateur.jpg', dimensions: '73 × 54 cm' },
-  { id: '05', image: '/images/collection/05-lage-de-lordinateur-portable.jpg', dimensions: '92 × 65 cm' },
-  { id: '06', image: '/images/collection/06-lage-du-social.jpg', dimensions: '100 × 65 cm' },
-  { id: '07', image: '/images/collection/07-lage-de-luniformisation.jpg', dimensions: '100 × 65 cm' },
-  { id: '08', image: '/images/collection/08-loverdose.jpg', dimensions: '60 × 80 cm' },
-  { id: '09', image: '/images/collection/09-un-equilibre-a-trouver.jpg', dimensions: '45 × 60 cm' },
-  { id: '10', image: '/images/collection/10-retrouver-la-nature.jpg', dimensions: '140 × 210 cm' },
+  { id: '01', images: ['/images/collection/01-lage-du-mp3.jpg'], dimensions: '73 × 54 cm' },
+  { id: '02', images: ['/images/collection/02-lage-du-smartphone.jpg'], dimensions: '46 × 55 cm' },
+  { id: '03', images: ['/images/collection/03-lage-du-jeu-video.jpg'], dimensions: '73 × 54 cm' },
+  { id: '04', images: ['/images/collection/04-lage-de-lordinateur.jpg'], dimensions: '73 × 54 cm' },
+  { id: '05', images: ['/images/collection/05-lage-de-lordinateur-portable.jpg'], dimensions: '92 × 65 cm' },
+  { id: '06', images: ['/images/collection/06-lage-du-social.jpg'], dimensions: '100 × 65 cm' },
+  { id: '07', images: ['/images/collection/07-lage-de-luniformisation.jpg'], dimensions: '100 × 65 cm' },
+  { id: '08', images: ['/images/collection/08-loverdose.jpg'], dimensions: '60 × 80 cm' },
+  { id: '09', images: ['/images/collection/09-un-equilibre-a-trouver.jpg'], dimensions: '45 × 60 cm' },
+  { id: '10', images: ['/images/collection/10-retrouver-la-nature.jpg'], dimensions: '140 × 210 cm' },
 ];
 
 export default function CollectionPage() {
   const t = useTranslations('collection');
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const scrollYRef = useRef(0);
 
   // Lock scroll when lightbox is open
@@ -54,6 +55,7 @@ export default function CollectionPage() {
   const openLightbox = (index: number) => {
     scrollYRef.current = window.scrollY;
     setCurrentIndex(index);
+    setSelectedImageIndex(0);
     setLightboxOpen(true);
   };
 
@@ -116,7 +118,7 @@ export default function CollectionPage() {
                   {/* Image Container */}
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <Image
-                      src={painting.image}
+                      src={painting.images[0]}
                       alt={t(`paintings.${painting.id}.title`)}
                       fill
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
@@ -157,7 +159,7 @@ export default function CollectionPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 bg-black/92 flex items-center justify-center"
+            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 sm:p-8"
             onClick={() => setLightboxOpen(false)}
           >
             {/* Close Button */}
@@ -169,11 +171,12 @@ export default function CollectionPage() {
               <X size={28} strokeWidth={1.5} />
             </button>
 
-            {/* Navigation */}
+            {/* Navigation Arrows */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 setCurrentIndex((prev) => (prev === 0 ? paintings.length - 1 : prev - 1));
+                setSelectedImageIndex(0);
               }}
               className="absolute left-4 sm:left-8 p-3 text-white/40 hover:text-white/80 transition-colors duration-300 z-10"
               aria-label={t('lightbox.previous')}
@@ -185,6 +188,7 @@ export default function CollectionPage() {
               onClick={(e) => {
                 e.stopPropagation();
                 setCurrentIndex((prev) => (prev === paintings.length - 1 ? 0 : prev + 1));
+                setSelectedImageIndex(0);
               }}
               className="absolute right-4 sm:right-8 p-3 text-white/40 hover:text-white/80 transition-colors duration-300 z-10"
               aria-label={t('lightbox.next')}
@@ -192,39 +196,71 @@ export default function CollectionPage() {
               <ChevronRight size={36} strokeWidth={1.5} />
             </button>
 
-            {/* Image */}
+            {/* Two Column Layout */}
             <motion.div
               key={currentIndex}
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="relative max-w-4xl w-full mx-4 sm:mx-8"
+              className="flex flex-col lg:flex-row gap-6 lg:gap-10 max-w-6xl w-full max-h-[85vh]"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative aspect-[4/5] sm:aspect-[3/4] max-h-[75vh] mx-auto">
-                <Image
-                  src={currentPainting.image}
-                  alt={t(`paintings.${currentPainting.id}.title`)}
-                  fill
-                  className="object-contain"
-                  sizes="100vw"
-                  priority
-                />
+              {/* Left Column - Image Gallery */}
+              <div className="flex flex-col gap-4 lg:w-1/2">
+                {/* Main Image */}
+                <div className="relative aspect-[4/5] flex-shrink-0 rounded-[3px] overflow-hidden bg-white/5">
+                  <Image
+                    src={currentPainting.images[selectedImageIndex]}
+                    alt={t(`paintings.${currentPainting.id}.title`)}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority
+                  />
+                </div>
+                
+                {/* Thumbnail Gallery */}
+                {currentPainting.images.length > 1 && (
+                  <div className="flex gap-2 overflow-x-auto pb-2">
+                    {currentPainting.images.map((img, imgIndex) => (
+                      <button
+                        key={imgIndex}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedImageIndex(imgIndex);
+                        }}
+                        className={`relative w-20 h-24 flex-shrink-0 rounded-[2px] overflow-hidden transition-all duration-200 ${
+                          selectedImageIndex === imgIndex 
+                            ? 'ring-2 ring-white/60' 
+                            : 'opacity-50 hover:opacity-80'
+                        }`}
+                      >
+                        <Image
+                          src={img}
+                          alt=""
+                          fill
+                          className="object-cover"
+                          sizes="80px"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
-              
-              {/* Caption */}
-              <div className="mt-6 text-center">
-                <p className="font-mono text-xs text-white/40 mb-2 tracking-wider">
+
+              {/* Right Column - Text */}
+              <div className="lg:w-1/2 flex flex-col justify-center text-white overflow-y-auto">
+                <p className="font-mono text-xs text-white/40 mb-3 tracking-wider">
                   {t('painting.number', { number: currentPainting.id })}
                 </p>
-                <h3 className="font-serif text-title text-white mb-1">
-                  {t(`paintings.${currentPainting.id}.title`)}
+                <h3 className="font-serif text-2xl sm:text-3xl text-white mb-3">
+                  {currentPainting.id} — {t(`paintings.${currentPainting.id}.title`)}
                 </h3>
-                <p className="text-sm text-white/50">
+                <p className="text-sm text-white/50 mb-6">
                   {t('painting.medium')} · {t('painting.year')} · {currentPainting.dimensions}
                 </p>
-                <p className="mt-4 text-body text-white/60 max-w-md mx-auto leading-relaxed">
+                <p className="text-base text-white/70 leading-relaxed">
                   {t(`paintings.${currentPainting.id}.caption`)}
                 </p>
               </div>

@@ -16,17 +16,19 @@ const paintings = [
       '/images/collection/01-lage-du-mp3-3.jpg',
       '/images/collection/01-lage-du-mp3-4.jpg',
     ], 
-    dimensions: '73 × 54 cm' 
+    dimensions: '73 × 54 cm',
+    available: true,
+    price: '1 270 €'
   },
-  { id: '02', images: ['/images/collection/02-lage-du-smartphone.jpg'], dimensions: '46 × 55 cm' },
-  { id: '03', images: ['/images/collection/03-lage-du-jeu-video.jpg'], dimensions: '73 × 54 cm' },
-  { id: '04', images: ['/images/collection/04-lage-de-lordinateur.jpg'], dimensions: '73 × 54 cm' },
-  { id: '05', images: ['/images/collection/05-lage-de-lordinateur-portable.jpg'], dimensions: '92 × 65 cm' },
-  { id: '06', images: ['/images/collection/06-lage-du-social.jpg'], dimensions: '100 × 65 cm' },
-  { id: '07', images: ['/images/collection/07-lage-de-luniformisation.jpg'], dimensions: '100 × 65 cm' },
-  { id: '08', images: ['/images/collection/08-loverdose.jpg'], dimensions: '60 × 80 cm' },
-  { id: '09', images: ['/images/collection/09-un-equilibre-a-trouver.jpg'], dimensions: '45 × 60 cm' },
-  { id: '10', images: ['/images/collection/10-retrouver-la-nature.jpg'], dimensions: '140 × 210 cm' },
+  { id: '02', images: ['/images/collection/02-lage-du-smartphone.jpg'], dimensions: '46 × 55 cm', available: false, price: '' },
+  { id: '03', images: ['/images/collection/03-lage-du-jeu-video.jpg'], dimensions: '73 × 54 cm', available: false, price: '' },
+  { id: '04', images: ['/images/collection/04-lage-de-lordinateur.jpg'], dimensions: '73 × 54 cm', available: false, price: '' },
+  { id: '05', images: ['/images/collection/05-lage-de-lordinateur-portable.jpg'], dimensions: '92 × 65 cm', available: false, price: '' },
+  { id: '06', images: ['/images/collection/06-lage-du-social.jpg'], dimensions: '100 × 65 cm', available: false, price: '' },
+  { id: '07', images: ['/images/collection/07-lage-de-luniformisation.jpg'], dimensions: '100 × 65 cm', available: false, price: '' },
+  { id: '08', images: ['/images/collection/08-loverdose.jpg'], dimensions: '60 × 80 cm', available: false, price: '' },
+  { id: '09', images: ['/images/collection/09-un-equilibre-a-trouver.jpg'], dimensions: '45 × 60 cm', available: false, price: '' },
+  { id: '10', images: ['/images/collection/10-retrouver-la-nature.jpg'], dimensions: '140 × 210 cm', available: false, price: '' },
 ];
 
 export default function CollectionPage() {
@@ -282,9 +284,14 @@ export default function CollectionPage() {
                   <p className="text-xs text-white/50 mb-5">
                     {t('painting.medium')} · {t('painting.year')} · {currentPainting.dimensions}
                   </p>
-                  <div className="text-sm text-white/60 leading-relaxed whitespace-pre-line pr-4">
+                  <div className="text-sm text-white/60 leading-relaxed whitespace-pre-line pr-4 mb-6">
                     {t(`paintings.${currentPainting.id}.caption`)}
                   </div>
+                  {currentPainting.available && (
+                    <p className="text-xs text-white/50">
+                      ● Toile disponible à l'achat — Prix : {currentPainting.price}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

@@ -8,7 +8,16 @@ import Image from 'next/image';
 
 // Painting data with dimensions and multiple images
 const paintings = [
-  { id: '01', images: ['/images/collection/01-lage-du-mp3.jpg'], dimensions: '73 × 54 cm' },
+  { 
+    id: '01', 
+    images: [
+      '/images/collection/01-lage-du-mp3.jpg',
+      '/images/collection/01-lage-du-mp3-2.jpg',
+      '/images/collection/01-lage-du-mp3-3.jpg',
+      '/images/collection/01-lage-du-mp3-4.jpg',
+    ], 
+    dimensions: '73 × 54 cm' 
+  },
   { id: '02', images: ['/images/collection/02-lage-du-smartphone.jpg'], dimensions: '46 × 55 cm' },
   { id: '03', images: ['/images/collection/03-lage-du-jeu-video.jpg'], dimensions: '73 × 54 cm' },
   { id: '04', images: ['/images/collection/04-lage-de-lordinateur.jpg'], dimensions: '73 × 54 cm' },

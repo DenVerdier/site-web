@@ -109,6 +109,24 @@
       "close": "閉じる",
       "previous": "前へ",
       "next": "次へ"
+    },
+    "order": {
+      "button": "この絵を注文",
+      "title": "この絵を注文",
+      "info": "配送を含む見積もりが送られます。",
+      "name": "名前",
+      "namePlaceholder": "フルネーム",
+      "email": "メール",
+      "emailPlaceholder": "your@email.com",
+      "phone": "電話",
+      "phonePlaceholder": "+33 6 00 00 00 00",
+      "address": "郵便住所",
+      "addressPlaceholder": "番地、郵便番号、市、国",
+      "message": "メッセージ（任意）",
+      "messagePlaceholder": "質問、特別なリクエスト...",
+      "submit": "リクエストを送信",
+      "sending": "送信中...",
+      "success": "リクエスト送信完了！"
     }
   },
   "license": {

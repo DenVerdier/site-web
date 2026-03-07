@@ -109,6 +109,24 @@
       "close": "Close",
       "previous": "Previous",
       "next": "Next"
+    },
+    "order": {
+      "button": "Order this painting",
+      "title": "Order this painting",
+      "info": "You will be contacted with a quote including delivery.",
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+33 6 00 00 00 00",
+      "address": "Postal address",
+      "addressPlaceholder": "Street, zip code, city, country",
+      "message": "Message (optional)",
+      "messagePlaceholder": "Questions, special requests...",
+      "submit": "Send request",
+      "sending": "Sending...",
+      "success": "Request sent!"
     }
   },
   "license": {

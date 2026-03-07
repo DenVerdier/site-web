@@ -40,3 +40,18 @@ model EditionRequest {
   message   String?
   createdAt DateTime @default(now())
 }
+
+model PaintingOrder {
+  id            String   @id @default(cuid())
+  paintingId    String
+  paintingTitle String
+  price         String
+  dimensions    String
+  name          String
+  email         String
+  phone         String
+  address       String
+  message       String?
+  locale        String?
+  createdAt     DateTime @default(now())
+}

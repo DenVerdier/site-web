@@ -109,6 +109,24 @@
       "close": "Fermer",
       "previous": "Précédent",
       "next": "Suivant"
+    },
+    "order": {
+      "button": "Commander la toile",
+      "title": "Commander cette toile",
+      "info": "Vous serez recontacté avec un devis incluant la livraison.",
+      "name": "Nom",
+      "namePlaceholder": "Votre nom complet",
+      "email": "E-mail",
+      "emailPlaceholder": "votre@email.com",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+33 6 00 00 00 00",
+      "address": "Adresse postale",
+      "addressPlaceholder": "Rue, code postal, ville, pays",
+      "message": "Message (optionnel)",
+      "messagePlaceholder": "Questions, demandes spéciales...",
+      "submit": "Envoyer la demande",
+      "sending": "Envoi...",
+      "success": "Demande envoyée !"
     }
   },
   "license": {

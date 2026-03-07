@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Loader2, ArrowRight, Check } from 'lucide-react';
 import Image from 'next/image';
 
 // Painting data with dimensions and multiple images
@@ -132,12 +132,59 @@ const paintings = [
 
 export default function CollectionPage() {
   const t = useTranslations('collection');
+  const locale = useLocale();
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [orderModalOpen, setOrderModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const scrollYRef = useRef(0);
 
   const currentPainting = paintings[currentIndex];
+
+  // Order form state
+  const [orderForm, setOrderForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    address: '',
+    message: '',
+  });
+
+  const handleOrderSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/order-painting', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...orderForm,
+          paintingId: currentPainting.id,
+          paintingTitle: t(`paintings.${currentPainting.id}.title`),
+          price: currentPainting.price,
+          dimensions: currentPainting.dimensions,
+          locale,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setOrderForm({ name: '', email: '', phone: '', address: '', message: '' });
+        setTimeout(() => {
+          setOrderModalOpen(false);
+          setIsSubmitted(false);
+        }, 2000);
+      }
+    } catch (error) {
+      console.error('Order submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   // Lock scroll when lightbox is open
   useEffect(() => {
@@ -384,11 +431,23 @@ export default function CollectionPage() {
                     {t('painting.medium')} · {t('painting.year')} · {currentPainting.dimensions}
                   </p>
                   {currentPainting.available && (
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-green-400/60 mb-5">
-                      <span className="text-green-400 text-xs animate-pulse">●</span>
-                      <p className="text-xs text-white/70">
-                        Toile disponible — Prix : {currentPainting.price}
-                      </p>
+                    <div className="flex flex-wrap items-center gap-3 mb-5">
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-green-400/60">
+                        <span className="text-green-400 text-xs animate-pulse">●</span>
+                        <p className="text-xs text-white/70">
+                          Toile disponible — Prix : {currentPainting.price}
+                        </p>
+                      </div>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setOrderModalOpen(true);
+                        }}
+                        className="px-4 py-1.5 rounded-lg border border-white/60 text-white text-xs hover:bg-white/10 transition-colors duration-300 flex items-center gap-2"
+                      >
+                        {t('order.button')}
+                        <ArrowRight size={14} />
+                      </button>
                     </div>
                   )}
                   <div className="text-sm text-white/60 leading-relaxed whitespace-pre-line pr-4">
@@ -423,6 +482,156 @@ export default function CollectionPage() {
                 <ChevronRight size={20} strokeWidth={1.5} />
               </button>
             </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Order Modal */}
+      <AnimatePresence>
+        {orderModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/80"
+            onClick={() => setOrderModalOpen(false)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="relative w-full max-w-md bg-[#f6ead7] rounded-xl shadow-2xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between px-6 py-4">
+                <h3 className="font-serif text-lg text-text-primary">
+                  {t('order.title')}
+                </h3>
+                <button
+                  onClick={() => setOrderModalOpen(false)}
+                  className="p-1 text-stone-400 hover:text-stone-600 transition-colors"
+                >
+                  <X size={20} strokeWidth={1.5} />
+                </button>
+              </div>
+
+              {/* Content */}
+              {isSubmitted ? (
+                <div className="px-6 py-12 text-center">
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-green-500/10 flex items-center justify-center">
+                    <Check size={24} strokeWidth={1.5} className="text-green-500" />
+                  </div>
+                  <p className="text-text-primary font-medium">{t('order.success')}</p>
+                </div>
+              ) : (
+                <form onSubmit={handleOrderSubmit} className="px-6 pb-6">
+                  {/* Painting Info */}
+                  <div className="mb-4 p-3 bg-white/50 backdrop-blur-sm rounded-[3px]">
+                    <p className="text-sm font-medium text-text-primary">
+                      {currentPainting.id} — {t(`paintings.${currentPainting.id}.title`)}
+                    </p>
+                    <p className="text-xs text-text-secondary">
+                      {currentPainting.dimensions} · {currentPainting.price}
+                    </p>
+                  </div>
+
+                  {/* Info Text */}
+                  <p className="text-xs text-text-secondary mb-4">
+                    {t('order.info')}
+                  </p>
+
+                  {/* Form Fields */}
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-xs text-text-secondary mb-1">
+                        {t('order.name')} *
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={orderForm.name}
+                        onChange={(e) => setOrderForm({ ...orderForm, name: e.target.value })}
+                        className="w-full px-3 py-2.5 bg-white/35 backdrop-blur-sm border border-white/40 focus:border-accent focus:bg-white/50 rounded-[3px] text-sm transition-all duration-300 focus:outline-none"
+                        placeholder={t('order.namePlaceholder')}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-text-secondary mb-1">
+                        {t('order.email')} *
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        value={orderForm.email}
+                        onChange={(e) => setOrderForm({ ...orderForm, email: e.target.value })}
+                        className="w-full px-3 py-2.5 bg-white/35 backdrop-blur-sm border border-white/40 focus:border-accent focus:bg-white/50 rounded-[3px] text-sm transition-all duration-300 focus:outline-none"
+                        placeholder={t('order.emailPlaceholder')}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-text-secondary mb-1">
+                        {t('order.phone')} *
+                      </label>
+                      <input
+                        type="tel"
+                        required
+                        value={orderForm.phone}
+                        onChange={(e) => setOrderForm({ ...orderForm, phone: e.target.value })}
+                        className="w-full px-3 py-2.5 bg-white/35 backdrop-blur-sm border border-white/40 focus:border-accent focus:bg-white/50 rounded-[3px] text-sm transition-all duration-300 focus:outline-none"
+                        placeholder={t('order.phonePlaceholder')}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-text-secondary mb-1">
+                        {t('order.address')} *
+                      </label>
+                      <textarea
+                        required
+                        rows={2}
+                        value={orderForm.address}
+                        onChange={(e) => setOrderForm({ ...orderForm, address: e.target.value })}
+                        className="w-full px-3 py-2.5 bg-white/35 backdrop-blur-sm border border-white/40 focus:border-accent focus:bg-white/50 rounded-[3px] text-sm transition-all duration-300 resize-none focus:outline-none"
+                        placeholder={t('order.addressPlaceholder')}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-text-secondary mb-1">
+                        {t('order.message')}
+                      </label>
+                      <textarea
+                        rows={2}
+                        value={orderForm.message}
+                        onChange={(e) => setOrderForm({ ...orderForm, message: e.target.value })}
+                        className="w-full px-3 py-2.5 bg-white/35 backdrop-blur-sm border border-white/40 focus:border-accent focus:bg-white/50 rounded-[3px] text-sm transition-all duration-300 resize-none focus:outline-none"
+                        placeholder={t('order.messagePlaceholder')}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full mt-6 px-4 py-3 bg-accent text-white rounded-[3px] font-medium text-sm hover:bg-accent/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 size={16} className="animate-spin" />
+                        {t('order.sending')}
+                      </>
+                    ) : (
+                      <>
+                        {t('order.submit')}
+                        <ArrowRight size={16} />
+                      </>
+                    )}
+                  </button>
+                </form>
+              )}
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

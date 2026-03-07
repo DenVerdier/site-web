@@ -109,6 +109,24 @@
       "close": "关闭",
       "previous": "上一幅",
       "next": "下一幅"
+    },
+    "order": {
+      "button": "订购此画",
+      "title": "订购此画",
+      "info": "您将收到包含运费的报价。",
+      "name": "姓名",
+      "namePlaceholder": "您的全名",
+      "email": "电子邮件",
+      "emailPlaceholder": "your@email.com",
+      "phone": "电话",
+      "phonePlaceholder": "+33 6 00 00 00 00",
+      "address": "邮政地址",
+      "addressPlaceholder": "街道、邮编、城市、国家",
+      "message": "留言（可选）",
+      "messagePlaceholder": "问题、特殊要求...",
+      "submit": "发送请求",
+      "sending": "发送中...",
+      "success": "请求已发送！"
     }
   },
   "license": {
